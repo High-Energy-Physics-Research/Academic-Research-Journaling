@@ -1,4 +1,26 @@
 :root {
+    --nb-paper: #fffbe6;
+}
+
+/* fundo geral do HTML */
+html,
+body {
+    background: var(--nb-paper) !important;
+}
+
+/* a “folha” do nbconvert */
+#notebook,
+#notebook-container {
+    background: var(--nb-paper) !important;
+}
+
+/* se existir uma camada intermediária */
+.container,
+div.container {
+    background: var(--nb-paper) !important;
+}
+
+:root {
     --nb-font: "Reenie Beanie", cursive;
     --nb-size: 22px;
     --nb-line: 1.6;
@@ -48,4 +70,29 @@ body {
     background: linear-gradient(transparent 60%, rgba(255, 5, 59, .75) 60%);
     padding: 0.05em 0.2em;
     border-radius: 0.15em;
+}
+
+.jp-RenderedHTMLCommon,
+.jp-RenderedHTMLCommon p,
+.jp-RenderedHTMLCommon li {
+    font-family: "Reenie Beanie", cursive;
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.note {
+    border-left: 4px solid #90caf9;
+    padding-left: 0.8em;
+    color: #1e3a5f;
+}
+
+.idea {
+    background: #e8f5e9;
+    padding: 0.6em 0.8em;
+    border-radius: 6px;
+}
+
+.question {
+    color: #6a1b9a;
+    font-style: italic;
 }
