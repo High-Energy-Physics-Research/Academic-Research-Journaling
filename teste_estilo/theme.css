@@ -1,0 +1,51 @@
+:root {
+    --nb-font: "Reenie Beanie", cursive;
+    --nb-size: 22px;
+    --nb-line: 1.6;
+    --nb-ink: #2c2c2c;
+    --nb-paper: #fffbe6;
+}
+
+/* fundo da página (opcional) */
+body {
+    background: var(--nb-paper);
+}
+
+/* 🔑 TEXTO DO NOTEBOOK (alvo correto) */
+.jp-RenderedHTMLCommon,
+.jp-RenderedHTMLCommon p,
+.jp-RenderedHTMLCommon li,
+.jp-RenderedHTMLCommon div,
+.jp-RenderedHTMLCommon span,
+.jp-RenderedHTMLCommon h1,
+.jp-RenderedHTMLCommon h2,
+.jp-RenderedHTMLCommon h3,
+.jp-RenderedHTMLCommon h4 {
+    font-family: var(--nb-font) !important;
+    font-size: var(--nb-size) !important;
+    line-height: var(--nb-line) !important;
+    color: var(--nb-ink) !important;
+}
+
+/* títulos um pouco maiores (opcional) */
+.jp-RenderedHTMLCommon h1 {
+    font-size: 40px !important;
+}
+
+.jp-RenderedHTMLCommon h2 {
+    font-size: 32px !important;
+}
+
+.jp-RenderedHTMLCommon h3 {
+    font-size: 26px !important;
+}
+
+/* ❌ NÃO toque no MathJax */
+
+/* efeito marcador de texto */
+
+.marker {
+    background: linear-gradient(transparent 60%, rgba(255, 5, 59, .75) 60%);
+    padding: 0.05em 0.2em;
+    border-radius: 0.15em;
+}
