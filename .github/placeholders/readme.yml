@@ -1,8 +1,8 @@
-REPO_TAGLINE: 
-ASSETS_DIR: 
-CTA_TEXT: 
+REPO_TAGLINE: Academic Research Journal
+ASSETS_DIR: Concepts * Theory * Simulation tools
+CTA_TEXT: Website
 THEME: 
-SITE_URL: 
+SITE_URL: http://high-energy-physics-research.github.io/academic-research-journal
 
 BG_1: "#101826"
 BG_2: "#2A1E14"
