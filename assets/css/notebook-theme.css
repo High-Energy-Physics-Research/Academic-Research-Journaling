@@ -1,0 +1,43 @@
+/* 1) Importa as fontes (troca aqui quando quiser) */
+@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Allison&family=Square+Peg&display=swap");
+
+/* 2) “Parâmetros” globais */
+:root {
+    --font-body: "Homemade Apple", cursive;
+    /* texto principal */
+    --font-title: "Allison", cursive;
+    /* títulos */
+    --font-note: "Square Peg", cursive;
+    /* comentários/rabiscos */
+
+    --text-size: 20px;
+    --title-size: 34px;
+    --line: 1.65;
+
+    --ink: #1f2a37;
+    /* cor do texto */
+    --paper: #fbfbf8;
+    /* fundo */
+}
+
+/* 3) Classes que você usa nos notebooks */
+.nb-body {
+    font-family: var(--font-body);
+    font-size: var(--text-size);
+    line-height: var(--line);
+    color: var(--ink);
+}
+
+.nb-title {
+    font-family: var(--font-title);
+    font-size: var(--title-size);
+}
+
+.nb-note {
+    font-family: var(--font-note);
+    opacity: .9;
+}
+
+.nb-body {
+    color: red !important;
+}
