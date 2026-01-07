@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Notebooks Tree — Academic-Research-Journal — Estudos</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="./css/paleta_cores.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/nav_bar.css" />
+    <link rel="stylesheet" href="./css/pages.css" />
+    <link rel="stylesheet" href="./css/software.css" />
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EM7FEY66C3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EM7FEY66C3');
+</script>
+<body>
+    <header class="navbar">
+        <div class="wrap">
+            <!-- Link extra à esquerda -->
+            <a class="repo-link" href="https://high-energy-physics-research.github.io/" title="Repositório Central">⚛</a>
+            
+            <div class="brand"><a href="./index.html">Homepage</a></div>
+            <nav class="nav">
+                <a href="./research.html">Referências</a>
+                <a href="./software.html">Estudos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-wide">
+        <div class="layout">
+            <aside class="sidebar">
+                <input id="q" class="search" placeholder="Filter notebooks..." />
+                <ul id="tree" class="tree"></ul>
+            </aside>
+            <section class="viewer">
+                <iframe id="viewer" src=""></iframe>
+            </section>
+        </div>
+    </main>
+
+    <!-- injeta a árvore apenas nesta página -->
+    <script>
+        window.TREE_DATA = {"type": "dir", "name": "Academic-Research-Journal", "path": "", "children": [{"type": "dir", "name": "2025", "path": "2025", "children": [{"type": "dir", "name": "dezembro", "path": "2025/dezembro", "children": [{"type": "file", "name": "15.ipynb", "path": "2025/dezembro/15.ipynb", "nb_html": "2025/dezembro/15.html"}, {"type": "file", "name": "18.ipynb", "path": "2025/dezembro/18.ipynb", "nb_html": "2025/dezembro/18.html"}, {"type": "file", "name": "19.ipynb", "path": "2025/dezembro/19.ipynb", "nb_html": "2025/dezembro/19.html"}, {"type": "file", "name": "21.ipynb", "path": "2025/dezembro/21.ipynb", "nb_html": "2025/dezembro/21.html"}, {"type": "file", "name": "22.ipynb", "path": "2025/dezembro/22.ipynb", "nb_html": "2025/dezembro/22.html"}]}]}, {"type": "dir", "name": "2026", "path": "2026", "children": [{"type": "dir", "name": "janeiro", "path": "2026/janeiro", "children": [{"type": "file", "name": "05.ipynb", "path": "2026/janeiro/05.ipynb", "nb_html": "2026/janeiro/05.html"}]}]}, {"type": "dir", "name": "teste_estilo", "path": "teste_estilo", "children": [{"type": "file", "name": "note.ipynb", "path": "teste_estilo/note.ipynb", "nb_html": "teste_estilo/note.html"}, {"type": "file", "name": "teste.ipynb", "path": "teste_estilo/teste.ipynb", "nb_html": "teste_estilo/teste.html"}]}]};
+    </script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
