@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>22</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
+<title>12</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
   import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
@@ -13239,7 +13239,53 @@ div#notebook {
 <main>
 <div class="border-box-sizing" id="notebook" tabindex="-1">
 <div class="container" id="notebook-container">
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=2fb55a61"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=e111db8a"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<style>
+.cursiva-v0 {
+  font-family: "Calligraffitti", "Comic Neue", "Segoe Script", "Apple Chancery", cursive;
+  font-size: 1.05em;
+  line-height: 1.6;
+  max-width: 900px;
+}
+</style>
+<div class="cursiva-v0">
+</div>
+<p><em>Sobre</em> $ \mathscr{v_0(p_T)} $.</p>
+<p>
+Fixando o momento transversal $p_T$, a distribuição azimutal de partículas pode ser expandida em uma série de Fourier como
+</p>
+<p>$$
+\frac{dN}{d\phi}(p_T)
+=
+\frac{N(p_T)}{2\pi}
+\left[
+1 + 2\sum_{n=1}^{\infty} v_n(p_T)\cos\big(n(\phi-\Psi_n)\big)
+\right].
+$$</p>
+<p>
+O coeficiente $v_0(p_T)$ surge ao projetarmos essa distribuição sobre o modo constante (harmônico de ordem zero), isto é,
+</p>
+<p>$$
+v_0(p_T)
+\;\propto\;
+\frac{1}{2\pi}\int_0^{2\pi}\frac{dN}{d\phi}(p_T)\,d\phi.
+$$</p>
+<p>
+Como
+</p>
+<p>$$
+\int_0^{2\pi}\cos\big(n(\phi-\Psi_n)\big)\,d\phi = 0 \quad \text{para } n\ge1,
+$$</p>
+<p>
+resta apenas o termo isotrópico, de modo que $v_0(p_T)$ representa a contribuição média angular — o <em>fundo isotrópico</em> — da produção de partículas naquele $p_T$.
+Assim, $v_0(p_T)$ não codifica anisotropia, mas estabelece a normalização física sobre a qual os coeficientes $v_n(p_T)$, $n\ge1$, quantificam as quebras de isotropia da colisão.
+</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=a8d980ba"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 </div>

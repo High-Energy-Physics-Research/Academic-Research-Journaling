@@ -13144,7 +13144,31 @@ div#notebook {
         }
         div.prompt.input_prompt,
         div.prompt.output_prompt {
-        display: none !important;
+            display: none !important;
+        }
+
+        div.prompt {
+            display: none !important;
+        }
+
+        div.output_area {
+            width: 100% !important;
+            margin-left: 0 !important;
+        }
+
+        div.output_area .output_subarea {
+            display: flex !important;
+            justify-content: center !important;
+        }
+
+        div.output_area .output_subarea > * {
+            max-width: 100%;
+        }
+
+        div.output_area img,
+        div.output_area svg {
+            display: block;
+            margin: 0 auto;
         }
 
         /* Indent só no conteúdo renderizado do Markdown (não mexe em código/output) */
@@ -13182,6 +13206,32 @@ div#notebook {
         .deps-box {
             max-width: 1200px;
             margin: 24px auto;
+        }
+
+        /* Faz o output ocupar toda a largura */
+        div.output_area {
+            display: block !important;
+        }
+
+        /* Remove o limite interno */
+        div.output_html.rendered_html {
+            max-width: 100% !important;
+            width: 100% !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        /* Centraliza qualquer card interno */
+        .fullwidth-center {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* remove a faixa do output HTML */
+        div.output_html.rendered_html.output_subarea {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
         }
         </style>
 </head>
