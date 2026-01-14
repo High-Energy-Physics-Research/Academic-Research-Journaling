@@ -1,0 +1,19 @@
+/* carregar fontes UMA vez */
+@import url("https://fonts.googleapis.com/css2?family=Sevillana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+/* ===== classes de fonte ===== */
+
+.font-sevillana{
+  font-family: "Sevillana", cursive;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #2c2c2c;
+}
+
+.font-inter{
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #222;
+}
