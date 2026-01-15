@@ -30,3 +30,24 @@
 .font-sevillana h4 {
   font-family: "Sevillana", cursive !important;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Sevillana&display=swap");
+
+/* JupyterLab/Notebook wrappers + sua classe */
+.jp-RenderedHTMLCommon .font-sevillana,
+.rendered_html .font-sevillana {
+  font-family: "Sevillana", cursive;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #2c2c2c;
+}
+
+/* headings dentro da classe */
+.jp-RenderedHTMLCommon .font-sevillana h1,
+.jp-RenderedHTMLCommon .font-sevillana h2,
+.jp-RenderedHTMLCommon .font-sevillana h3,
+.rendered_html .font-sevillana h1,
+.rendered_html .font-sevillana h2,
+.rendered_html .font-sevillana h3 {
+  font-family: "Sevillana", cursive !important;
+}
