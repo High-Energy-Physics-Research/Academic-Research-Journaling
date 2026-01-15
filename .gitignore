@@ -12,7 +12,9 @@ __pycache__/
 
 # virtualenvs
 .venv/
+.venvp/
 venv/
+venvp/
 env/
 ENV/
 
@@ -63,6 +65,12 @@ htmlcov/
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+*.vrb
+*.snm
+*.nav
+*.blg
+*.bcf
+
 
 # BibTeX / biber
 *.bbl
