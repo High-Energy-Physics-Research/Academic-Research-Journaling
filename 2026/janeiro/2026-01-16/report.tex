@@ -67,16 +67,27 @@
 %----------------------------------------------------------------------------------------
 % BIBLIOGRAFIA
 %----------------------------------------------------------------------------------------
-\usepackage[style=alphabetic,backend=biber]{biblatex}
+% \usepackage[style=alphabetic,backend=biber]{biblatex}
+% \addbibresource{bibliografia.bib}
+
+\usepackage[backend=biber,style=numeric]{biblatex}
 \addbibresource{bibliografia.bib}
 
+%----------------------------------------------------------------------------------------
+% HIPERLINKS
+%----------------------------------------------------------------------------------------
+\usepackage{hyperref}
+\hypersetup{
+  hidelinks,
+  urlcolor=blue
+}
 %----------------------------------------------------------------------------------------
 % INFORMAÇÕES DA APRESENTAÇÃO
 %----------------------------------------------------------------------------------------
 \title[Report]{Report}          % [Versão curta]{Versão completa}
 \author[Nara Avila]{Nara Avila Moraes}            % [Versão curta]{Nome completo}
 \institute[IFUSP]{Physics Institute \\ IFUSP}
-\date[Ano]{2026 / 01 / 16}
+\date[2026]{2026 / 01 / 16}
 
 %----------------------------------------------------------------------------------------
 % INÍCIO DO DOCUMENTO
@@ -93,7 +104,7 @@
 
 % Sumário
 \begin{frame}
-    \frametitle{Estrutura da apresentação}
+    \frametitle{Summary}
     \tableofcontents
 \end{frame}
 
@@ -106,7 +117,7 @@
 % Slide final
 \begin{frame}
     \begin{center}
-        {\Huge Fim da apresentação!}
+        {\Large Fim da apresentação!}
     \end{center}
 \end{frame}
 
