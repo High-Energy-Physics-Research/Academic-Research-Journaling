@@ -1,23 +1,5 @@
 {
   "type": "folder",
   "title": "Reports",
-  "children": [
-    {
-      "type": "folder",
-      "title": "2026",
-      "children": [
-        {
-          "type": "folder",
-          "title": "2026-01",
-          "children": [
-            {
-              "type": "pdf",
-              "title": "2026-01-16 — report",
-              "path": "2026-01-16/report.pdf"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  "children": []
 }
