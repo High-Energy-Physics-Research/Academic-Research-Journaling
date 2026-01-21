@@ -13381,6 +13381,178 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered" id="cell-id=7481b325"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Distribui%C3%A7%C3%A3o-Exponencial-%E2%80%94-leitura-estrutural-e-conceitual">Distribuição Exponencial — leitura estrutural e conceitual<a class="anchor-link" href="#Distribui%C3%A7%C3%A3o-Exponencial-%E2%80%94-leitura-estrutural-e-conceitual">¶</a></h1><h2 id="1.-Ideia-central">1. Ideia central<a class="anchor-link" href="#1.-Ideia-central">¶</a></h2><p>A distribuição exponencial surge quando modelamos <strong>tempo de espera até um evento</strong>
+sob a hipótese de <strong>ausência de memória</strong>.</p>
+<blockquote>
+<p>O passado não altera a probabilidade do futuro.</p>
+</blockquote>
+<hr/>
+<h2 id="2.-Defini%C3%A7%C3%A3o-matem%C3%A1tica">2. Definição matemática<a class="anchor-link" href="#2.-Defini%C3%A7%C3%A3o-matem%C3%A1tica">¶</a></h2><h3 id="Vari%C3%A1vel-aleat%C3%B3ria-cont%C3%ADnua">Variável aleatória contínua<a class="anchor-link" href="#Vari%C3%A1vel-aleat%C3%B3ria-cont%C3%ADnua">¶</a></h3><p>$$
+X \sim \text{Exponencial}(\lambda), \quad \lambda &gt; 0
+$$</p>
+<h3 id="Fun%C3%A7%C3%A3o-densidade-de-probabilidade-(pdf)">Função densidade de probabilidade (pdf)<a class="anchor-link" href="#Fun%C3%A7%C3%A3o-densidade-de-probabilidade-(pdf)">¶</a></h3><p>$$
+f(x) = \lambda e^{-\lambda x}, \quad x \ge 0
+$$</p>
+<h3 id="Fun%C3%A7%C3%A3o-de-distribui%C3%A7%C3%A3o-acumulada-(cdf)">Função de distribuição acumulada (cdf)<a class="anchor-link" href="#Fun%C3%A7%C3%A3o-de-distribui%C3%A7%C3%A3o-acumulada-(cdf)">¶</a></h3><p>$$
+F(x) = P(X \le x) = 1 - e^{-\lambda x}
+$$</p>
+<h3 id="Fun%C3%A7%C3%A3o-de-sobreviv%C3%AAncia-(cauda-direita)">Função de sobrevivência (cauda direita)<a class="anchor-link" href="#Fun%C3%A7%C3%A3o-de-sobreviv%C3%AAncia-(cauda-direita)">¶</a></h3><p>$$
+S(x) = P(X &gt; x) = e^{-\lambda x}
+$$</p>
+<hr/>
+<h2 id="3.-Propriedade-fundamental-%E2%80%94-tempo-sem-mem%C3%B3ria">3. Propriedade fundamental — <strong>tempo sem memória</strong><a class="anchor-link" href="#3.-Propriedade-fundamental-%E2%80%94-tempo-sem-mem%C3%B3ria">¶</a></h2><p>A exponencial é a <strong>única distribuição contínua</strong> que satisfaz:</p>
+<p>$$
+P(X &gt; t_1 + t_2 \mid X &gt; t_1) = P(X &gt; t_2)
+$$</p>
+<p>Equivalente a:
+$$
+S(t_1 + t_2) = S(t_1) S(t_2)
+$$</p>
+<p>A única função contínua que satisfaz essa equação funcional é:
+$$
+S(t) = e^{-\lambda t}
+$$</p>
+<hr/>
+<h2 id="4.-Interpreta%C3%A7%C3%A3o-f%C3%ADsica-/-probabil%C3%ADstica">4. Interpretação física / probabilística<a class="anchor-link" href="#4.-Interpreta%C3%A7%C3%A3o-f%C3%ADsica-/-probabil%C3%ADstica">¶</a></h2><ul>
+<li>Eventos <strong>não acumulam desgaste</strong></li>
+<li>O sistema <strong>não envelhece</strong></li>
+<li>O risco instantâneo é constante</li>
+</ul>
+<h3 id="Taxa-de-falha-(hazard)">Taxa de falha (hazard)<a class="anchor-link" href="#Taxa-de-falha-(hazard)">¶</a></h3><p>$$
+h(x) = \frac{f(x)}{S(x)} = \lambda
+$$</p>
+<p>A probabilidade de falha <strong>por unidade de tempo</strong> é constante.</p>
+<hr/>
+<h2 id="5.-O-que-a-exponencial-modela">5. O que a exponencial modela<a class="anchor-link" href="#5.-O-que-a-exponencial-modela">¶</a></h2><ul>
+<li>Tempo até uma falha aleatória</li>
+<li>Tempo até chegada de um evento (fila, decaimento, emissão)</li>
+<li>Processos sem envelhecimento</li>
+<li>Eventos governados apenas pelo <strong>presente</strong></li>
+</ul>
+<p>Exemplos:</p>
+<ul>
+<li>Decaimento radioativo</li>
+<li>Tempo até uma ligação chegar</li>
+<li>Tempo até um átomo decair</li>
+<li>Tempo até uma falha eletrônica aleatória</li>
+</ul>
+<hr/>
+<h2 id="6.-Compara%C3%A7%C3%A3o-estrutural-(informa%C3%A7%C3%A3o-imposta)">6. Comparação estrutural (informação imposta)<a class="anchor-link" href="#6.-Compara%C3%A7%C3%A3o-estrutural-(informa%C3%A7%C3%A3o-imposta)">¶</a></h2><table>
+<thead>
+<tr>
+<th>Informação imposta</th>
+<th>Distribuição resultante</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nenhuma</td>
+<td>impossível</td>
+</tr>
+<tr>
+<td>média</td>
+<td>exponencial</td>
+</tr>
+<tr>
+<td>média + variância</td>
+<td>normal</td>
+</tr>
+<tr>
+<td>taxa de falha variável</td>
+<td>Weibull</td>
+</tr>
+</tbody>
+</table>
+<p>A exponencial é a <strong>distribuição de máxima entropia</strong>
+quando só sabemos a <strong>média</strong> e o suporte é $ x \ge 0 $.</p>
+<hr/>
+<h2 id="7.-Weibull-%E2%80%94-generaliza%C3%A7%C3%A3o-natural">7. Weibull — generalização natural<a class="anchor-link" href="#7.-Weibull-%E2%80%94-generaliza%C3%A7%C3%A3o-natural">¶</a></h2><p>A Weibull relaxa a hipótese de hazard constante.</p>
+<h3 id="Fun%C3%A7%C3%A3o-de-sobreviv%C3%AAncia">Função de sobrevivência<a class="anchor-link" href="#Fun%C3%A7%C3%A3o-de-sobreviv%C3%AAncia">¶</a></h3><p>$$
+S(x) = e^{-(x/\lambda)^k}
+$$</p>
+<h3 id="Taxa-de-falha">Taxa de falha<a class="anchor-link" href="#Taxa-de-falha">¶</a></h3><p>$$
+h(x) = \frac{k}{\lambda} \left(\frac{x}{\lambda}\right)^{k-1}
+$$</p>
+<table>
+<thead>
+<tr>
+<th>Parâmetro $k$</th>
+<th>Comportamento do hazard</th>
+<th>Interpretação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$k = 1$</td>
+<td>constante</td>
+<td>exponencial (sem memória)</td>
+</tr>
+<tr>
+<td>$k &lt; 1$</td>
+<td>decrescente</td>
+<td>falhas iniciais dominam</td>
+</tr>
+<tr>
+<td>$k &gt; 1$</td>
+<td>crescente</td>
+<td>envelhecimento / desgaste</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="8.-Insight-estrutural-unificador">8. Insight estrutural unificador<a class="anchor-link" href="#8.-Insight-estrutural-unificador">¶</a></h2><table>
+<thead>
+<tr>
+<th>Simetria imposta</th>
+<th>Equação funcional</th>
+<th>Função forçada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aditiva</td>
+<td>$f(x+y) = f(x) + f(y)$</td>
+<td>linear</td>
+</tr>
+<tr>
+<td>Multiplicativa</td>
+<td>$g(xy) = g(x)g(y)$</td>
+<td>potência</td>
+</tr>
+<tr>
+<td>Tempo sem memória</td>
+<td>$S(t_1+t_2)=S(t_1)S(t_2)$</td>
+<td>exponencial</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Simetrias + continuidade ⇒ forma funcional inevitável</strong></p>
+<hr/>
+<h2 id="9.-Aus%C3%AAncia-de-escala-(scale-free)">9. Ausência de escala (scale-free)<a class="anchor-link" href="#9.-Aus%C3%AAncia-de-escala-(scale-free)">¶</a></h2><p>A exponencial <strong>não possui tempo característico privilegiado</strong>:</p>
+<ul>
+<li>não existe “tempo típico”</li>
+<li>qualquer instante é estatisticamente equivalente</li>
+<li>o processo é <strong>invariante por translação temporal</strong></li>
+</ul>
+<p>Isso é o que conecta:</p>
+<ul>
+<li>exponencial</li>
+<li>ausência de memória</li>
+<li>máxima entropia</li>
+<li>hazard constante</li>
+</ul>
+<hr/>
+<h2 id="10.-Leitura-final">10. Leitura final<a class="anchor-link" href="#10.-Leitura-final">¶</a></h2><blockquote>
+<p>A exponencial não é apenas uma distribuição.<br/>
+Ela é o <strong>modelo matemático inevitável</strong> quando o tempo <strong>não carrega história</strong>.</p>
+</blockquote>
+<hr/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=472156f9"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 </div>
 </div>
 </div>
