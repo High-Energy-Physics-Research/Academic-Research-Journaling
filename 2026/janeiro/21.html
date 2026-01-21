@@ -13553,6 +13553,67 @@ Ela é o <strong>modelo matemático inevitável</strong> quando o tempo <strong>
 <div class="cell border-box-sizing text_cell rendered" id="cell-id=472156f9"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Correla%C3%A7%C3%B5es-e-Transformada-de-Fourier-%E2%80%94-Lembrete">Correlações e Transformada de Fourier — Lembrete<a class="anchor-link" href="#Correla%C3%A7%C3%B5es-e-Transformada-de-Fourier-%E2%80%94-Lembrete">¶</a></h2><h3 id="Ideia-central">Ideia central<a class="anchor-link" href="#Ideia-central">¶</a></h3><blockquote>
+<p><strong>Correlação no espaço real ↔ estrutura no espaço de frequências.</strong></p>
+</blockquote>
+<p>A Transformada de Fourier <strong>revela</strong> padrões de correlação tornando-os visíveis.</p>
+<hr/>
+<h3 id="Autocorrela%C3%A7%C3%A3o">Autocorrelação<a class="anchor-link" href="#Autocorrela%C3%A7%C3%A3o">¶</a></h3><p>Para um processo (ou sinal) estacionário $ x(t) $:</p>
+<p>$$
+C(\tau) = \mathbb{E}[x(t)\,x(t+\tau)]
+$$</p>
+<p>mede <strong>dependência entre valores separados por um atraso $\tau$</strong>.</p>
+<hr/>
+<h3 id="Teorema-de-Wiener%E2%80%93Khinchin">Teorema de Wiener–Khinchin<a class="anchor-link" href="#Teorema-de-Wiener%E2%80%93Khinchin">¶</a></h3><p>$$
+\boxed{
+\mathcal{F}\{C(\tau)\} = S(\omega)
+}
+$$</p>
+<ul>
+<li>$C(\tau)$: função de autocorrelação</li>
+<li>$S(\omega)$: densidade espectral de potência</li>
+</ul>
+<p>➡ <strong>Correlação no tempo = concentração no espectro.</strong></p>
+<hr/>
+<h3 id="Leituras-r%C3%A1pidas-do-espectro">Leituras rápidas do espectro<a class="anchor-link" href="#Leituras-r%C3%A1pidas-do-espectro">¶</a></h3><ul>
+<li><strong>Espectro plano</strong> → ruído branco → sem correlação</li>
+<li><strong>Pico em $\omega_0$</strong> → periodicidade oculta</li>
+<li><strong>Baixas frequências dominantes</strong> → memória longa</li>
+<li><strong>Lei de potência</strong> → ausência de escala (processos críticos)</li>
+</ul>
+<hr/>
+<h3 id="Por-que-Fourier-funciona?">Por que Fourier funciona?<a class="anchor-link" href="#Por-que-Fourier-funciona?">¶</a></h3><ul>
+<li>Correlação é uma <strong>convolução</strong></li>
+<li>Fourier transforma convolução em <strong>produto</strong></li>
+<li>Isso “diagonaliza” dependências</li>
+</ul>
+<p>$$
+\mathcal{F}\{x * x\} = \mathcal{F}\{x\}\,\mathcal{F}\{x\}^*
+$$</p>
+<hr/>
+<h3 id="Conex%C3%B5es-estruturais">Conexões estruturais<a class="anchor-link" href="#Conex%C3%B5es-estruturais">¶</a></h3><ul>
+<li>Exponencial (sem memória) → espectro Lorentziano</li>
+<li>Normal → estabilidade sob convolução</li>
+<li>Weibull → taxa de falha variável → espectro não trivial</li>
+<li>Processos estacionários → kernels definidos em Fourier</li>
+</ul>
+<hr/>
+<h3 id="Quando-usar-Fourier-para-correla%C3%A7%C3%B5es">Quando usar Fourier para correlações<a class="anchor-link" href="#Quando-usar-Fourier-para-correla%C3%A7%C3%B5es">¶</a></h3><p>✔ Processos estacionários<br/>
+✔ Dependência em diferenças ($t_1 - t_2$)<br/>
+✔ Busca por escalas, memória, periodicidade</p>
+<p>Não ideal para eventos pontuais raros ou não estacionários<br/>
+(usar wavelets nesses casos)</p>
+<hr/>
+<h3 id="Resumo">Resumo<a class="anchor-link" href="#Resumo">¶</a></h3><blockquote>
+<p><strong>Se existe correlação, ela aparece como estrutura no espaço de frequências.<br/>
+Fourier é a linguagem natural das simetrias de translação.</strong></p>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=f7b9b72e"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 </div>
 </div>
 </div>
