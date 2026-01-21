@@ -13242,21 +13242,29 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered" id="cell-id=82a9bc50"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>$$
-\mathrm{Var}(X)=\mathbb{E}[X^2]-\mathbb{E}[X]^2
-$$</p>
 <details>
-<summary><b>Prova</b> (clique para abrir)</summary>
-</details>
+<summary style="text-align:center; font-size:1.1em;">
+</summary></details>
+<p>$$
+  \mathrm{Var}(X)=\mathbb{E}[X^2]-\mathbb{E}[X]^2
+  $$</p>
+<div>
+</div>
+<p><strong>Prova.</strong></p>
 <p><strong>Passo 1.</strong> Expanda:
 $$
-(X-\mu)^2 = X^2 - 2\mu X + \mu^2
-$$</p>
-<p><strong>Passo 2.</strong> Aplique linearidade:
+  (X-\mu)^2 = X^2 - 2\mu X + \mu^2
+  $$</p>
+<p><strong>Passo 2.</strong> Aplique linearidade da esperança:
 $$
-\mathbb{E}[(X-\mu)^2]=\mathbb{E}[X^2]-2\mu\mathbb{E}[X]+\mu^2
-$$</p>
-<p>...</p>
+  \mathbb{E}[(X-\mu)^2]
+  = \mathbb{E}[X^2] - 2\mu\,\mathbb{E}[X] + \mu^2
+  $$</p>
+<p><strong>Passo 3.</strong> Use $\mu=\mathbb{E}[X]$:
+$$
+  \mathbb{E}[X^2] - \mu^2
+  $$</p>
+<p>(\square)</p>
 </div>
 </div>
 </div>
