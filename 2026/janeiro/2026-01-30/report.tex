@@ -24,6 +24,8 @@
 ]{beamer}
 \graphicspath{{img/}}         % Define o diretório das imagens
 
+\usepackage{multirow}
+
 %----------------------------------------------------------------------------------------
 % PACOTES NECESSÁRIOS
 %----------------------------------------------------------------------------------------
@@ -81,6 +83,33 @@
   hidelinks,
   urlcolor=blue
 }
+
+\usepackage{pifont}
+\usepackage{xcolor}
+
+\newcommand{\done}{\textcolor{green}{\ding{51}}}      % ✔ concluído
+% \newcommand{\pending}{\textcolor{orange}{\ding{108}}} % ○ pendente
+\newcommand{\blocked}{\textcolor{red}{\ding{55}}}    % ✘ bloqueado
+% \newcommand{\inprogress}{\textcolor{blue!70!black}{\ding{115}}} % ◐ iniciado
+
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{pifont}
+
+% \newcommand{\done}{\textcolor{green!70!black}{\ding{51}}}
+
+\newcommand{\pending}{%
+  \tikz[baseline=-0.6ex]\draw[gray!70, line width=0.5pt] (0,0) circle (0.7ex);%
+}
+
+\newcommand{\inprogress}{%
+  \tikz[baseline=-0.6ex]{
+    \draw[blue!70!black, line width=0.5pt] (0,0) circle (0.7ex);
+\fill[blue!70!black]
+  (0,0) -- (0,0.7ex)
+  arc (90:-70:0.7ex) -- cycle;
+  }%
+}
 %----------------------------------------------------------------------------------------
 % INFORMAÇÕES DA APRESENTAÇÃO
 %----------------------------------------------------------------------------------------
@@ -103,16 +132,16 @@
 \end{frame}
 
 % Sumário
-% \begin{frame}
-%     \frametitle{Summary}
-%     \tableofcontents
-% \end{frame}
+\begin{frame}
+    \frametitle{Summary}
+    \tableofcontents
+\end{frame}
 
 % Inclusão das seções
-% \include{sections/section00}
-% \include{sections/section01}
-% \include{sections/section02}
-% \include{sections/section03}
+\include{sections/section00}
+\include{sections/section01}
+\include{sections/section02}
+\include{sections/section03}
 
 % Slide final
 % \begin{frame}

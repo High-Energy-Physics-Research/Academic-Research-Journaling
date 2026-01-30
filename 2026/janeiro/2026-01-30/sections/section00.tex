@@ -2,23 +2,121 @@
 
 %----------------------------------------------------------------------------------------
 
+
 \begin{frame}
   \frametitle{Tasks Status}
-    \begin{table}[h]
-        \centering
-        \begin{tabular}{|l|c|c|}
-        \hline
-        \textbf{Task} & \textbf{Status} & \textbf{Link} \\
-        \hline
-         &  & \\
-        \hline
-         &  & \\
-        \hline
-        \end{tabular}
-    \end{table}
+
+  % Ajustes úteis em tabelas no Beamer
+  \centering
+  \renewcommand{\arraystretch}{1.15} % mais espaço vertical entre linhas
+
+  \begin{table}
+
+\begin{tabular}{|p{0.58\textwidth}|c|p{0.22\textwidth}|}
+\hline
+\textbf{Task} & \textbf{Status} & \textbf{Link} \\
+\hline
+
+\textbf{Criar toy model} & &
+\multirow{4}{*}{\centering \href{https://high-energy-physics-research.github.io/Gaussian-Process-Research/studies.html?nb=Estudo\%2FFase+01+-+Prova+de+Conceito\%2F0.ipynb}
+     {Notebook}} \\
+\cline{1-2}
+
+\hspace{1.2em}\small$\hookrightarrow$ Gerar dados sintéticos (correlacionados + ruído opcional) & \done & \\
+\cline{1-2}
+
+\hspace{1.2em}\small$\hookrightarrow$ Ajustar GP (kernel, hiperparâmetros) & \done & \\
+\cline{1-2}
+
+\hspace{1.2em}\small$\hookrightarrow$ Comparar: resíduos, log-likelihood & \done & \\
+\cline{1-2}
+
+\hspace{1.2em}\small$\hookrightarrow$ Plotar a previsão & \done & \\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+%----------------------------------------------------------------------------------------
+
+
+\begin{frame}
+  \frametitle{Tasks Status}
+
+  \centering
+  \renewcommand{\arraystretch}{1.15}
+
+  \begin{table}
+    \begin{tabular}{|p{0.58\textwidth}|c|p{0.22\textwidth}|}
+      \hline
+      \textbf{Task} & \textbf{Status} &  \\
+      \hline
+
+      \textbf{Analisar toy model} &  &  \\
+      \hline
+
+      \hspace{1.2em}\small$\hookrightarrow$ Sensibilidade à escolha do kernel
+      & \pending &  \\
+      \hline
+
+      \hspace{1.2em}\small$\hookrightarrow$ Otimização do log marginal
+      & \pending &  \\
+      \hline
+
+      \hspace{1.2em}\small$\hookrightarrow$ Predição
+      & \pending &  \\
+      \hline
+
+      \hspace{1.2em}\small$\hookrightarrow$ Resíduos
+      & \pending &  \\
+      \hline
+
+      \hspace{1.2em}\small$\hookrightarrow$ Comparação: modelo correto vs kernel errado
+      & \pending &  \\
+      \hline
+
+    \end{tabular}
+  \end{table}
 \end{frame}
 
-%----------------------------------------------------------------------------------------
+\begin{frame}
+  \frametitle{Tasks Status}
+
+  % Ajustes úteis em tabelas no Beamer
+  \centering
+  \renewcommand{\arraystretch}{1.15} % mais espaço vertical entre linhas
+
+  \begin{table}
+
+\begin{tabular}{|p{0.58\textwidth}|c|p{0.22\textwidth}|}
+\hline
+\textbf{Task} & \textbf{Status} & \textbf{Link} \\
+\hline
+
+\textbf{Escrever projeto} & &
+\multirow{4}{*}{\centering \href{https://www.overleaf.com/project/696e133a1101ac682ea3dd98}{Projeto}} \\
+\cline{1-2}
+
+\hspace{1.2em}\small$\hookrightarrow$ Definir escopo e objetivos & \done & \\
+\cline{1-2}
+
+\hspace{1.2em}\small$\hookrightarrow$ Esboçar introdução (motivação + observáveis) & \done & \\
+\cline{1-2}
+
+\hspace{1.2em}\small$\hookrightarrow$ Listar método/dados (GP, Inferencia Bayesiana) & \pending & \\
+\cline{1-2}
+
+\hspace{1.2em}\small$\hookrightarrow$ Listar objetivos & \inprogress & \\
+\cline{1-2}
+
+\hspace{1.2em}\small$\hookrightarrow$ Cronograma & \done & \\
+\cline{1-2}
+
+\hspace{1.2em}\small$\hookrightarrow$ Selecionar bibliografia & \done & \\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
 % \begin{frame}{Uma imagem}
 %     \frametitle{Historical Records}
 %     In addition, it is possible to retrieve the full search history by running the script directly via GitHub Actions.
