@@ -26,6 +26,17 @@
               "path": "2026-01-30/report.pdf"
             }
           ]
+        },
+        {
+          "type": "folder",
+          "title": "2026-02",
+          "children": [
+            {
+              "type": "pdf",
+              "title": "2026-02-05 — report",
+              "path": "2026-02-05/report.pdf"
+            }
+          ]
         }
       ]
     }
