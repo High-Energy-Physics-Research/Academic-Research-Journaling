@@ -1,0 +1,303 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+% CLASSE DO DOCUMENTO
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+    11pt,
+    %aspectratio=169
+]{beamer}
+
+%----------------------------------------------------------------------------------------
+% CAMINHO DAS IMAGENS
+%----------------------------------------------------------------------------------------
+
+\graphicspath{{img/}}
+
+%----------------------------------------------------------------------------------------
+% PACOTES
+%----------------------------------------------------------------------------------------
+
+\usepackage{
+    booktabs,
+    multirow,
+    palatino,
+    subcaption
+}
+
+\usepackage[default]{opensans}
+
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{pifont}
+\usepackage{hyperref}
+
+\hypersetup{
+    hidelinks,
+    urlcolor=blue
+}
+
+\input{config/code_langs}
+
+%----------------------------------------------------------------------------------------
+% BIBLIOGRAFIA
+%----------------------------------------------------------------------------------------
+
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{bibliografia.bib}
+
+%----------------------------------------------------------------------------------------
+% TEMA
+%----------------------------------------------------------------------------------------
+
+\usetheme{Boadilla}
+\useinnertheme{circles}
+
+% Removendo miniframes antigos
+% \useoutertheme{miniframes}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+%----------------------------------------------------------------------------------------
+% CORES
+%----------------------------------------------------------------------------------------
+
+\definecolor{primaryColor}{RGB}{40,96,128}
+\definecolor{secondaryColor}{RGB}{217,217,217}
+\definecolor{thirdColor}{RGB}{18,80,105}
+\definecolor{titleRed}{RGB}{180,20,20}
+
+%----------------------------------------------------------------------------------------
+% CONFIGURAÇÃO DAS CORES DO BEAMER
+%----------------------------------------------------------------------------------------
+
+\setbeamercolor{structure}{fg=primaryColor}
+
+\setbeamercolor{palette primary}{
+    bg=primaryColor,
+    fg=white
+}
+
+\setbeamercolor{palette secondary}{
+    bg=secondaryColor,
+    fg=white
+}
+
+\setbeamercolor{title}{
+    fg=white,
+    bg=primaryColor
+}
+
+%----------------------------------------------------------------------------------------
+% CABEÇALHO E RODAPÉ
+%----------------------------------------------------------------------------------------
+
+\setbeamercolor{headline}{
+    bg=secondaryColor,
+    fg=white
+}
+
+\setbeamercolor{author in head/foot}{
+    bg=primaryColor,
+    fg=white
+}
+
+\setbeamercolor{title in head/foot}{
+    bg=thirdColor,
+    fg=white
+}
+
+\setbeamercolor{date in head/foot}{
+    bg=primaryColor,
+    fg=white
+}
+
+%----------------------------------------------------------------------------------------
+% COMANDOS PERSONALIZADOS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\done}{
+    \textcolor{green}{\ding{51}}
+}
+
+\newcommand{\blocked}{
+    \textcolor{red}{\ding{55}}
+}
+
+\newcommand{\pending}{%
+  \tikz[baseline=-0.6ex]
+  \draw[gray!70, line width=0.5pt]
+  (0,0) circle (0.7ex);
+}
+
+\newcommand{\inprogress}{%
+  \tikz[baseline=-0.6ex]{
+    \draw[blue!70!black, line width=0.5pt]
+    (0,0) circle (0.7ex);
+
+    \fill[blue!70!black]
+      (0,0) --
+      (0,0.7ex)
+      arc (90:-70:0.7ex)
+      -- cycle;
+  }
+}
+
+%----------------------------------------------------------------------------------------
+% INFORMAÇÕES DA APRESENTAÇÃO
+%----------------------------------------------------------------------------------------
+
+\title[Scaled particle spectra]
+{
+Exploring the universality of scaled particle spectra\\
+with Bayesian inference in heavy-ion collisions
+}
+
+\author[Nara Avila]
+{
+\textbf{Nara Avila Moraes}
+}
+
+\institute[IFUSP]
+{
+Advisor: \textbf{Prof. Dr. Matthew William Luzum}\\[0.2cm]
+Instituto de Física da Universidade de São Paulo (IFUSP)\\[0.2cm]
+Supported by CNPq
+}
+
+\date[2026]
+{
+RETINHA XXXIII 2026\\
+June 24, 2026
+}
+
+%----------------------------------------------------------------------------------------
+% INÍCIO DO DOCUMENTO
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+% CAPA
+%----------------------------------------------------------------------------------------
+
+\begin{frame}[plain]
+
+\begin{center}
+
+\vspace{0.3cm}
+
+%-----------------------------------
+% TÍTULO
+%-----------------------------------
+
+{\LARGE
+\textcolor{titleRed}{
+\textbf{
+Study of the effect of correlated experimental uncertainty on Bayesian
+Inference of quark–gluon plasma properties
+}
+}
+}
+
+\vspace{0.5cm}
+
+%-----------------------------------
+% REFERÊNCIA
+%-----------------------------------
+
+\vspace{0.5cm}
+
+%-----------------------------------
+% AUTOR
+%-----------------------------------
+
+{\Large
+\textbf{MSc. student: Nara Avila Moraes}
+}
+
+\vspace{0.3cm}
+
+%-----------------------------------
+% ORIENTADOR
+%-----------------------------------
+
+{\large
+Advisor: \textbf{Prof. Dr. Matthew William Luzum}
+}
+
+\vspace{0.3cm}
+
+%-----------------------------------
+% AFILIAÇÃO
+%-----------------------------------
+
+{\large
+Instituto de Física / USP
+}
+
+\vspace{0.5cm}
+
+%-----------------------------------
+% EVENTO
+%-----------------------------------
+
+{\large
+RETINHA XXXIII 2026
+}
+
+\vspace{0.15cm}
+
+{\large
+June 24, 2026
+}
+
+\vfill
+
+%-----------------------------------
+% LOGOS
+%-----------------------------------
+
+\begin{figure}
+\centering
+
+\includegraphics[height=1cm]{logo_ifusp.png}
+\hspace{0.5cm}
+\includegraphics[height=1.2cm]{logo_ifna.png}
+\hspace{0.5cm}
+\includegraphics[height=1.1cm]{logo_cbpf.jpg}
+\hspace{0.5cm}
+\includegraphics[height=0.9cm]{logo_cnpq.jpg}
+
+\end{figure}
+
+\end{center}
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+% SUMÁRIO
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Summary}
+    \tableofcontents
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+% SEÇÕES
+%----------------------------------------------------------------------------------------
+
+\include{sections/section01}
+\include{sections/section00}
+\include{sections/section02}
+
+%----------------------------------------------------------------------------------------
+% FIM
+%----------------------------------------------------------------------------------------
+
+\end{document}
