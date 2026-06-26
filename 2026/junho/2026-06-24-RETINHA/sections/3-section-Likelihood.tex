@@ -1,11 +1,7 @@
-%------------------------------------------------------
---
-\section{Likelihood and Uncertainty Quantification}
 \begin{frame}
 \frametitle{Likelihood and Uncertainty Quantification}
 
 \small
-
 The agreement between model predictions and experimental data is quantified
 through a multivariate Gaussian likelihood:
 
@@ -24,28 +20,27 @@ through a multivariate Gaussian likelihood:
 \right]
 \]
 
-\vspace{0.2cm}
-
-where
+where:
+\vspace{-0.1cm}
 
 \[
-\Sigma=\Sigma_{\rm exp}+\Sigma_{\rm model}.
+\Sigma=\Sigma_{\rm exp}+\Sigma_{\rm emu}+\Sigma_{\rm model}
 \]
 
-\vspace{0.2cm}
+\vspace{0.3cm}
 
 \begin{columns}[T]
 
 \column{0.48\textwidth}
 
-\textbf{Experimental uncertainty}
+\textbf{Experimental covariance}
 
 \[
 \Sigma_{\rm exp}
 =
-\Sigma_{\rm stat}^{\rm exp}
+\Sigma_{\rm stat}
 +
-\Sigma_{\rm sys}^{\rm exp}
+\Sigma_{\rm sys}
 \]
 
 \begin{itemize}
@@ -55,12 +50,12 @@ where
 
 \column{0.48\textwidth}
 
-\textbf{Model uncertainty}
-
+\textbf{Model covariance}
+\vspace{-0.1cm}
 \[
 \Sigma_{\rm model}
 =
-\Sigma_{\rm emu}
+\Sigma_{\rm pred}
 +
 \Sigma_{\rm stat}^{\rm model}
 +
@@ -75,21 +70,12 @@ where
 
 \end{columns}
 
-\vspace{0.25cm}
-
-\centering
-\color{blue}
-\textbf{This work focuses on the treatment of}
-\[
-\boxed{\Sigma_{\rm sys}^{\rm exp}}
-\]
-\textbf{through different experimental correlation models.}
-
 \vfill
 
 {\tiny
-Adapted from Bernhard \textit{et al.},
-Nature Physics \textbf{15}, 1113--1117 (2019).
+Adapted from Bernhard \emph{et al.},
+Nature Physics 15 (2019).
 }
 
 \end{frame}
+

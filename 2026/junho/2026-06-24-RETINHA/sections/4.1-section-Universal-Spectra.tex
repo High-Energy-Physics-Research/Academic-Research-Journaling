@@ -1,0 +1,93 @@
+
+\begin{frame}
+\frametitle{Bayesian Calibration using Universal Scaled Spectra}
+
+\begin{columns}[T]
+
+%====================================================
+% LEFT
+%====================================================
+
+\column{0.48\textwidth}
+
+\centering
+
+\Large
+
+\[
+\boxed{
+\text{Universal Scaled Spectra}
+}
+\]
+
+\vspace{0.25cm}
+
+\[
+\Downarrow
+\]
+
+\vspace{0.15cm}
+
+\[
+\boxed{
+\text{Hydrodynamic Model}
+}
+\]
+
+\vspace{0.25cm}
+
+\[
+\Downarrow
+\]
+
+\vspace{0.15cm}
+
+\[
+\boxed{
+\text{Gaussian Process Emulator}
+}
+\]
+
+\vspace{0.25cm}
+
+\[
+\Downarrow
+\]
+
+\vspace{0.15cm}
+
+\[
+\boxed{
+\text{Bayesian Inference}
+}
+\]
+
+%====================================================
+% RIGHT
+%====================================================
+
+\column{0.52\textwidth}
+
+\small
+
+\textbf{Calibration procedure}
+
+\begin{itemize}
+    \item Universal scaled spectra are used as experimental observables.
+    \item Event-by-event hydrodynamic simulations are replaced by Gaussian Process emulators.
+    \item Bayesian inference constrains the QGP model parameters.
+\end{itemize}
+
+\vspace{0.25cm}
+
+\textbf{This work}
+
+\begin{itemize}
+    \item Keep the original Bayesian calibration framework.
+    \item Replace the diagonal experimental covariance matrix by correlated covariance models (CS and RBF).
+    \item Quantify the impact on the inferred QGP parameters.
+\end{itemize}
+
+\end{columns}
+
+\end{frame}

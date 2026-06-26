@@ -19,10 +19,14 @@ comparing theoretical predictions with experimental measurements.
 Bayes' theorem updates prior knowledge using experimental evidence:
 
 \[
-P(\boldsymbol{\theta}|D)
-\propto
-P(D|\boldsymbol{\theta})P(\boldsymbol{\theta})
+P(\theta|D)=
+\frac{P(D|\theta)P(\theta)}
+{P(D)}
 \]
+
+{\scriptsize
+($P(D)$ is the normalization constant.)
+}
 
 \begin{itemize}
     \item $\boldsymbol{\theta}$: model parameters
@@ -32,9 +36,7 @@ P(D|\boldsymbol{\theta})P(\boldsymbol{\theta})
 \end{itemize}
 
 {\tiny
-J. E. Bernhard, J. S. Moreland and S. A. Bass,
-\textit{Bayesian estimation of the specific shear and bulk viscosity of quark--gluon plasma},
-Nature Physics \textbf{15}, 1113--1117 (2019).
+Bernhard \textit{et al.}, Nature Physics \textbf{15}, 1113--1117 (2019).
 }
 %--------------------------------------------------------
 \column{0.50\textwidth}
@@ -57,19 +59,17 @@ Nature Physics \textbf{15}, 1113--1117 (2019).
 \[
 \boxed{\text{Likelihood}}
 \]
-
+\vspace{-0.15cm}
 \[
 \Downarrow
 \]
-
+\vspace{-0.15cm}
 \[
 \boxed{\text{Posterior}}
 \]
-
-Sampled through MCMC.
+\vspace{0.15cm}
+Sampled using MCMC.
 
 \end{columns}
-
-\vfill
 
 \end{frame}
