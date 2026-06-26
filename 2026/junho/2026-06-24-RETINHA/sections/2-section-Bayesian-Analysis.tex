@@ -1,0 +1,80 @@
+\section{Bayesian Analysis}
+%--------------------------------------------------------
+%--------------------------------------------------------
+\begin{frame}
+\frametitle{Bayesian Parameter Estimation}
+
+\small
+
+The properties of the QGP are not directly observable; they are inferred by
+comparing theoretical predictions with experimental measurements.
+
+\vspace{0.15cm}
+
+\begin{columns}[T]
+
+\column{0.50\textwidth}
+
+Bayes' theorem updates prior knowledge using experimental evidence:
+
+\[
+P(\boldsymbol{\theta}|D)
+\propto
+P(D|\boldsymbol{\theta})P(\boldsymbol{\theta})
+\]
+
+\begin{itemize}
+    \item $\boldsymbol{\theta}$: model parameters
+    \item $P(\boldsymbol{\theta})$: prior
+    \item $P(D|\boldsymbol{\theta})$: likelihood
+    \item $P(\boldsymbol{\theta}|D)$: posterior
+\end{itemize}
+
+\column{0.50\textwidth}
+
+\centering
+\footnotesize
+
+\[
+\boxed{\text{Prior}}
+\rightarrow
+\boxed{\text{Model}}
+\rightarrow
+\boxed{\text{Observables}}
+\]
+
+\vspace{0.2cm}
+
+\[
+\boxed{\text{Experimental Data}}
+\]
+
+\vspace{0.05cm}
+
+\[
+\Downarrow
+\]
+
+\vspace{0.05cm}
+
+\[
+\boxed{\text{Likelihood}}
+\rightarrow
+\boxed{\text{Posterior}}
+\]
+
+\vspace{0.2cm}
+
+Posterior samples are obtained using MCMC.
+
+\end{columns}
+
+\vfill
+
+{\tiny
+J. E. Bernhard, J. S. Moreland and S. A. Bass,
+\textit{Bayesian estimation of the specific shear and bulk viscosity of quark--gluon plasma},
+Nature Physics \textbf{15}, 1113--1117 (2019).
+}
+
+\end{frame}

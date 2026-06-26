@@ -1,0 +1,95 @@
+%------------------------------------------------------
+--
+\section{Likelihood and Uncertainty Quantification}
+\begin{frame}
+\frametitle{Likelihood and Uncertainty Quantification}
+
+\small
+
+The agreement between model predictions and experimental data is quantified
+through a multivariate Gaussian likelihood:
+
+\vspace{0.2cm}
+
+\[
+\mathcal{L}(\boldsymbol{\theta})
+=
+\frac{1}
+{\sqrt{(2\pi)^n |\Sigma|}}
+\exp\left[
+-\frac12
+(\mathbf y_m-\mathbf y_e)^T
+\Sigma^{-1}
+(\mathbf y_m-\mathbf y_e)
+\right]
+\]
+
+\vspace{0.2cm}
+
+where
+
+\[
+\Sigma=\Sigma_{\rm exp}+\Sigma_{\rm model}.
+\]
+
+\vspace{0.2cm}
+
+\begin{columns}[T]
+
+\column{0.48\textwidth}
+
+\textbf{Experimental uncertainty}
+
+\[
+\Sigma_{\rm exp}
+=
+\Sigma_{\rm stat}^{\rm exp}
++
+\Sigma_{\rm sys}^{\rm exp}
+\]
+
+\begin{itemize}
+\item Statistical uncertainty
+\item Correlated systematic uncertainty
+\end{itemize}
+
+\column{0.48\textwidth}
+
+\textbf{Model uncertainty}
+
+\[
+\Sigma_{\rm model}
+=
+\Sigma_{\rm emu}
++
+\Sigma_{\rm stat}^{\rm model}
++
+\Sigma_{\rm sys}^{\rm model}
+\]
+
+\begin{itemize}
+\item Emulator prediction
+\item Simulation statistics
+\item Model discrepancy
+\end{itemize}
+
+\end{columns}
+
+\vspace{0.25cm}
+
+\centering
+\color{blue}
+\textbf{This work focuses on the treatment of}
+\[
+\boxed{\Sigma_{\rm sys}^{\rm exp}}
+\]
+\textbf{through different experimental correlation models.}
+
+\vfill
+
+{\tiny
+Adapted from Bernhard \textit{et al.},
+Nature Physics \textbf{15}, 1113--1117 (2019).
+}
+
+\end{frame}
