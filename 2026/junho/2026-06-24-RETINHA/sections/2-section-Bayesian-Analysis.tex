@@ -1,5 +1,5 @@
 \section{Bayesian Analysis}
-%--------------------------------------------------------
+
 %--------------------------------------------------------
 \begin{frame}
 \frametitle{Bayesian Parameter Estimation}
@@ -13,6 +13,7 @@ comparing theoretical predictions with experimental measurements.
 
 \begin{columns}[T]
 
+%--------------------------------------------------------
 \column{0.50\textwidth}
 
 Bayes' theorem updates prior knowledge using experimental evidence:
@@ -30,51 +31,45 @@ P(D|\boldsymbol{\theta})P(\boldsymbol{\theta})
     \item $P(\boldsymbol{\theta}|D)$: posterior
 \end{itemize}
 
+{\tiny
+J. E. Bernhard, J. S. Moreland and S. A. Bass,
+\textit{Bayesian estimation of the specific shear and bulk viscosity of quark--gluon plasma},
+Nature Physics \textbf{15}, 1113--1117 (2019).
+}
+%--------------------------------------------------------
 \column{0.50\textwidth}
 
 \centering
 \footnotesize
 
 \[
-\boxed{\text{Prior}}
-\rightarrow
-\boxed{\text{Model}}
-\rightarrow
-\boxed{\text{Observables}}
+\boxed{\text{Experimental Data}}
+\hspace{0.6cm}
+\boxed{\text{Model Predictions}}
 \]
-
-\vspace{0.01cm}
 
 \[
-\boxed{\text{Experimental Data}}
+\searrow
+\hspace{2.0cm}
+\swarrow
 \]
 
-\vspace{0.01cm}
+\[
+\boxed{\text{Likelihood}}
+\]
 
 \[
 \Downarrow
 \]
 
-\vspace{0.01cm}
-
 \[
-\boxed{\text{Likelihood}}
-\rightarrow
 \boxed{\text{Posterior}}
 \]
 
-\vspace{0.01cm}
-
-Posterior samples are obtained using MCMC.
+Sampled through MCMC.
 
 \end{columns}
 
 \vfill
-
-{\tiny
-J. E. Bernhard, J. S. Moreland and S. A. Bass,
-\textit{Bayesian estimation of the specific shear and bulk viscosity of quark--gluon plasma},
-Nature Physics \textbf{15}, 1113--1117 (2019).
-}
 
 \end{frame}
