@@ -1,0 +1,75 @@
+\section{Bayesian Analysis}
+
+%--------------------------------------------------------
+\begin{frame}
+\frametitle{Bayesian Parameter Estimation}
+
+\small
+
+The properties of the QGP are not directly observable; they are inferred by
+comparing theoretical predictions with experimental measurements.
+
+\vspace{0.15cm}
+
+\begin{columns}[T]
+
+%--------------------------------------------------------
+\column{0.50\textwidth}
+
+Bayes' theorem updates prior knowledge using experimental evidence:
+
+\[
+P(\theta|D)=
+\frac{P(D|\theta)P(\theta)}
+{P(D)}
+\]
+
+{\scriptsize
+($P(D)$ is the normalization constant.)
+}
+
+\begin{itemize}
+    \item $\boldsymbol{\theta}$: model parameters
+    \item $P(\boldsymbol{\theta})$: prior
+    \item $P(D|\boldsymbol{\theta})$: likelihood
+    \item $P(\boldsymbol{\theta}|D)$: posterior
+\end{itemize}
+
+{\tiny
+Bernhard \textit{et al.}, Nature Physics \textbf{15}, 1113--1117 (2019).
+}
+%--------------------------------------------------------
+\column{0.50\textwidth}
+
+\centering
+\footnotesize
+
+\[
+\boxed{\text{Experimental Data}}
+\hspace{0.6cm}
+\boxed{\text{Model Predictions}}
+\]
+
+\[
+\searrow
+\hspace{2.0cm}
+\swarrow
+\]
+
+\[
+\boxed{\text{Likelihood}}
+\]
+\vspace{-0.15cm}
+\[
+\Downarrow
+\]
+\vspace{-0.15cm}
+\[
+\boxed{\text{Posterior}}
+\]
+\vspace{0.15cm}
+Sampled using MCMC.
+
+\end{columns}
+
+\end{frame}

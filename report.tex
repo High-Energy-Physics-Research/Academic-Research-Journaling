@@ -55,27 +55,31 @@
 
 \usetheme{Boadilla}
 \useinnertheme{circles}
-
-% Removendo miniframes antigos
-% \useoutertheme{miniframes}
+\useoutertheme{smoothbars}
+\usecolortheme{dove}
+\usefonttheme{professionalfonts}
 
 \setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
 
 %----------------------------------------------------------------------------------------
 % CORES
 %----------------------------------------------------------------------------------------
 
-\definecolor{primaryColor}{RGB}{40,96,128}
-\definecolor{secondaryColor}{RGB}{217,217,217}
-\definecolor{thirdColor}{RGB}{18,80,105}
-\definecolor{titleRed}{RGB}{180,20,20}
+\definecolor{primaryColor}{RGB}{46,78,102}
+\definecolor{secondaryColor}{RGB}{224,231,236}
+\definecolor{thirdColor}{RGB}{92,118,138}
+\definecolor{accentColor}{RGB}{122,146,164}
+\definecolor{textColor}{RGB}{35,44,52}
+\definecolor{titleRed}{RGB}{132,42,42}
 
 %----------------------------------------------------------------------------------------
 % CONFIGURAÇÃO DAS CORES DO BEAMER
 %----------------------------------------------------------------------------------------
 
 \setbeamercolor{structure}{fg=primaryColor}
+\setbeamercolor{normal text}{fg=textColor,bg=white}
+\setbeamercolor{background canvas}{bg=white}
 
 \setbeamercolor{palette primary}{
     bg=primaryColor,
@@ -84,12 +88,37 @@
 
 \setbeamercolor{palette secondary}{
     bg=secondaryColor,
+    fg=textColor
+}
+
+\setbeamercolor{palette tertiary}{
+    bg=thirdColor,
     fg=white
+}
+
+\setbeamercolor{palette quaternary}{
+    bg=secondaryColor,
+    fg=textColor
 }
 
 \setbeamercolor{title}{
     fg=white,
     bg=primaryColor
+}
+
+\setbeamercolor{frametitle}{
+    fg=primaryColor,
+    bg=secondaryColor
+}
+
+\setbeamercolor{block title}{
+    fg=white,
+    bg=thirdColor
+}
+
+\setbeamercolor{block body}{
+    fg=textColor,
+    bg=secondaryColor!45!white
 }
 
 %----------------------------------------------------------------------------------------
@@ -98,7 +127,7 @@
 
 \setbeamercolor{headline}{
     bg=secondaryColor,
-    fg=white
+    fg=textColor
 }
 
 \setbeamercolor{author in head/foot}{
@@ -114,6 +143,37 @@
 \setbeamercolor{date in head/foot}{
     bg=primaryColor,
     fg=white
+}
+
+\setbeamercolor{section in head/foot}{
+        bg=secondaryColor,
+        fg=textColor
+}
+
+\setbeamercolor{section in head/foot shaded}{
+        bg=secondaryColor,
+        fg=accentColor
+}
+
+\setbeamerfont{title}{series=\bfseries}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+
+\setbeamertemplate{headline}{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=3.1ex,dp=1.4ex,leftskip=0.8cm,rightskip=0.3cm]{section in head/foot}
+        \insertsectionnavigationhorizontal{\dimexpr\paperwidth-1.1cm\relax}{}{}
+    \end{beamercolorbox}%
+}
+
+\setbeamertemplate{footline}{%
+    \leavevmode%
+    \hbox{%
+        \begin{beamercolorbox}[wd=.72\paperwidth,ht=2.8ex,dp=1.2ex,leftskip=0.8cm]{author in head/foot}%
+            \usebeamerfont{author in head/foot}\insertshortauthor\hfill\insertshorttitle
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.28\paperwidth,ht=2.8ex,dp=1.2ex,rightskip=0.8cm plus1fil]{date in head/foot}%
+            \usebeamerfont{date in head/foot}\hfill\insertframenumber\,/\,\inserttotalframenumber
+        \end{beamercolorbox}%
+    }%
 }
 
 %----------------------------------------------------------------------------------------
@@ -151,13 +211,13 @@
 % INFORMAÇÕES DA APRESENTAÇÃO
 %----------------------------------------------------------------------------------------
 
-\title[Scaled particle spectra]
+\title[Experimental Correlated Uncertainty]
 {
 Exploring the universality of scaled particle spectra\\
 with Bayesian inference in heavy-ion collisions
 }
 
-\author[Nara Avila]
+\author[Nara Moraes]
 {
 \textbf{Nara Avila Moraes}
 }
@@ -171,7 +231,7 @@ Supported by CNPq
 
 \date[2026]
 {
-RETINHA XXXIII 2026\\
+XXXIII Reunião de Trabalho sobre Interações Hadrônicas\\
 June 24, 2026
 }
 
@@ -216,7 +276,7 @@ Inference of quark–gluon plasma properties
 %-----------------------------------
 
 {\Large
-\textbf{MSc. student: Nara Avila Moraes}
+\textbf{M.Sc. student: Nara Moraes}
 }
 
 \vspace{0.3cm}
@@ -235,9 +295,7 @@ Advisor: \textbf{Prof. Dr. Matthew William Luzum}
 % AFILIAÇÃO
 %-----------------------------------
 
-{\large
-Instituto de Física / USP
-}
+
 
 \vspace{0.5cm}
 
@@ -246,13 +304,13 @@ Instituto de Física / USP
 %-----------------------------------
 
 {\large
-RETINHA XXXIII 2026
+XXXIII Reunião de Trabalho sobre Interações Hadrônicas\\
 }
 
 \vspace{0.15cm}
 
 {\large
-June 24, 2026
+June 26, 2026
 }
 
 \vfill
@@ -270,7 +328,7 @@ June 24, 2026
 \hspace{0.5cm}
 \includegraphics[height=1.1cm]{logo_cbpf.jpg}
 \hspace{0.5cm}
-\includegraphics[height=0.9cm]{logo_cnpq.jpg}
+\raisebox{1mm}{\includegraphics[height=0.9cm]{logo_cnpq.jpg}}
 
 \end{figure}
 
@@ -283,7 +341,7 @@ June 24, 2026
 %----------------------------------------------------------------------------------------
 
 \begin{frame}
-    \frametitle{Summary}
+    \frametitle{Outline}
     \tableofcontents
 \end{frame}
 
@@ -291,7 +349,20 @@ June 24, 2026
 % SEÇÕES
 %----------------------------------------------------------------------------------------
 
-\include{sections/section-Introduction}
+
+\include{sections/1-section-QGP}
+\include{sections/1.1-Enhancement}
+\include{sections/1.2-Nuclear-Supression}
+\include{sections/2-section-Bayesian-Analysis}
+\include{sections/3-section-Likelihood}
+\include{sections/3.1-section-Likelihood}
+\include{sections/4-section-Universal-Scaled}
+% \include{sections/4.1-section-Universal-Spectra}
+% \include{sections/5-section-PreliminaryResults}
+\include{sections/5-section-alternative}
+\include{sections/6-summary}
+\include{sections/7-next-steps}
+\include{sections/8-section-Agradecimento}
 
 %----------------------------------------------------------------------------------------
 
@@ -299,13 +370,14 @@ June 24, 2026
 
 %----------------------------------------------------------------------------------------
 
-\begin{frame}[allowframebreaks]
+% \begin{frame}[allowframebreaks]
 
-\frametitle{References}
 
-\printbibliography
+% \frametitle{References}
 
-\end{frame}
+% \printbibliography
+
+% \end{frame}
 %----------------------------------------------------------------------------------------
 % FIM
 %----------------------------------------------------------------------------------------
