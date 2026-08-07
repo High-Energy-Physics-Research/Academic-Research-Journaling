@@ -121,6 +121,17 @@
               "path": "2026-07-03/report.pdf"
             }
           ]
+        },
+        {
+          "type": "folder",
+          "title": "2026-08",
+          "children": [
+            {
+              "type": "pdf",
+              "title": "2026-08-07 — report",
+              "path": "2026-08-07/report.pdf"
+            }
+          ]
         }
       ]
     }
