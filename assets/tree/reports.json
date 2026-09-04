@@ -147,6 +147,17 @@
               "path": "2026-08-28/report.pdf"
             }
           ]
+        },
+        {
+          "type": "folder",
+          "title": "2026-09",
+          "children": [
+            {
+              "type": "pdf",
+              "title": "2026-09-04 — report",
+              "path": "2026-09-04/report.pdf"
+            }
+          ]
         }
       ]
     }
