@@ -156,6 +156,16 @@
               "type": "pdf",
               "title": "2026-09-04 — report",
               "path": "2026-09-04/report.pdf"
+            },
+            {
+              "type": "pdf",
+              "title": "2026-09-11 — report",
+              "path": "2026-09-11/report.pdf"
+            },
+            {
+              "type": "pdf",
+              "title": "2026-09-18 — report",
+              "path": "2026-09-18/report.pdf"
             }
           ]
         }
