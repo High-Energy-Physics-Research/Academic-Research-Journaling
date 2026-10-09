@@ -81,19 +81,15 @@ with the original JETSCAPE emulator
 
 \hspace{1em}$\hookrightarrow$ Reproduce the same results with
 the \texttt{hic\_bayes} emulator
-& \pending & Validation \\
+& \done & Validation \\
 \hline
 
 \hspace{1em}$\hookrightarrow$ Emulator closure test
-& \pending & Validation \\
+& \done & Validation \\
 \hline
 
 \hspace{1em}$\hookrightarrow$ MCMC convergence test
-& \pending & Diagnostics \\
-\hline
-
-\hspace{1em}$\hookrightarrow$ Verify that model parameters are constrained
-& \pending & Posteriors \\
+& \done & Diagnostics \\
 \hline
 
 \end{tabular}
@@ -112,28 +108,51 @@ the \texttt{hic\_bayes} emulator
 \hline
 
 \hspace{1em}$\hookrightarrow$ Au--Au-200 + d--Au-200:
-Diagonal vs. CS vs. RBF correlation models
-& \inprogressqqqqqq & Posteriors \\
+Correlation-model sensitivity
+& & Posteriors \\
+
+{\scriptsize
+\hspace{2.5em}$\bullet$ Global CS correlation}
+& \done & \\
+
+{\scriptsize
+\hspace{2.5em}$\bullet$ Global RBF correlation}
+& \done & \\
+
+{\scriptsize
+\hspace{2.5em}$\bullet$ Global RBF correlation fix unit}
+& \inprogressqqq & \\
+
+{\scriptsize
+\hspace{2.5em}$\bullet$ Detector-grouped CS correlation}
+& \inprogressqqqq & \\
+
+{\scriptsize
+\hspace{2.5em}$\bullet$ Detector-grouped RBF correlation}
+& \inprogressqqqq & \\
 \hline
 
 \hspace{1em}$\hookrightarrow$ Compare posterior shifts,
 credible intervals, and parameter correlations
-& \inprogressqqqqq & Analysis \\
-\hline
+& & Analysis \\
 
-\hspace{1em}$\hookrightarrow$ \textbf{Question to answer:} What is the
-appropriate correlation-length unit for an RBF covariance
-spanning heterogeneous observables/bins?
-& \pending & Study \\
+{\scriptsize
+\hspace{2.5em}$\bullet$ Global correlation models}
+& \done & \\
+
+{\scriptsize
+\hspace{2.5em}$\bullet$ Detector-grouped correlation models}
+& \inprogressqqqq & \\
 \hline
 
 \hspace{1em}$\hookrightarrow$ Quantify and compare the emulator-error
 and experimental-error covariance matrices in the likelihood
-& \pending & Analysis \\
+& \inprogressqq & Analysis \\
 \hline
 
 \end{tabular}
 \end{frame}
+
 
 \begin{frame}[t]
 \frametitle{Phase 3 -- Correlation Inference from Multiple Samples}
@@ -213,7 +232,7 @@ matrices through the Bayesian likelihood
   \item \textbf{Single sample:} CS, RBF, Zero, GP
   \item \textbf{Multiple samples:} Classical, Quantum
 \end{itemize}
-& \pending & Posteriors \\
+& \inprogressqqq & Posteriors \\
 \hline
 
 \hspace{1em}$\hookrightarrow$ Quantify covariance-estimation error
