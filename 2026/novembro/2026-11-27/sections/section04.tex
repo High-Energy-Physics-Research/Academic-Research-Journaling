@@ -1,0 +1,131 @@
+\section{Synthetic Data Study Plan}
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+  \frametitle{Synthetic Data Study Plan}
+
+  \centering
+  \renewcommand{\arraystretch}{1.15}
+
+  \begin{table}
+    \begin{tabular}{|p{0.43\textwidth}|p{0.27\textwidth}|c|}
+      \hline
+      \textbf{Synthetic data} & \textbf{Inference model} & \textbf{Status} \\
+      \hline
+
+      \textbf{RBF-correlated data}
+      & GP RBF fit with optimized $\ell$
+      & \inprogressqqq \\
+      \hline
+
+      \textbf{CS-correlated data}
+      & CS covariance fit with optimized $\rho$
+      & \pending \\
+      \hline
+
+      \textbf{Diagonal data}
+      & Diagonal covariance fit
+      & \pending \\
+      \hline
+
+      \textbf{RBF-correlated data}
+      & Sample covariance baseline
+      & \pending \\
+      \hline
+
+      \textbf{CS-correlated data}
+      & Sample covariance baseline
+      & \pending \\
+      \hline
+
+      \textbf{Diagonal data}
+      & Sample covariance baseline
+      & \pending \\
+      \hline
+
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Cross-Kernel Synthetic Study Matrix}
+
+  \centering
+  \renewcommand{\arraystretch}{1.25}
+
+  \begin{table}
+    \begin{tabular}{|p{0.22\textwidth}|c|c|c|}
+      \hline
+      \textbf{Truth / Fit} & \textbf{Diagonal fit} & \textbf{CS fit} & \textbf{GP RBF fit} \\
+      \hline
+
+      \textbf{Diagonal data}
+      & \pending
+      & \pending
+      & \pending \\
+      \hline
+
+      \textbf{CS data}
+      & \pending
+      & \pending
+      & \pending \\
+      \hline
+
+      \textbf{RBF data}
+      & \pending
+      & \pending
+      & \inprogressqqq \\
+      \hline
+
+    \end{tabular}
+  \end{table}
+
+  \vspace{0.3cm}
+  \small
+  Each cell compares inferred covariance structure against the known synthetic covariance.
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Synthetic Data Study Outputs}
+
+  \centering
+  \renewcommand{\arraystretch}{1.15}
+
+  \begin{table}
+    \begin{tabular}{|p{0.52\textwidth}|c|p{0.22\textwidth}|}
+      \hline
+      \textbf{Output} & \textbf{Status} & \textbf{Purpose} \\
+      \hline
+
+      \hspace{1.2em}\small$\hookrightarrow$ Hyperparameter recovery table
+      & \pending
+      & $\ell$, $\rho$, amplitudes \\
+      \hline
+
+      \hspace{1.2em}\small$\hookrightarrow$ Pointwise ratio table
+      & \pending
+      & GP / synthetic truth \\
+      \hline
+
+      \hspace{1.2em}\small$\hookrightarrow$ Covariance matrix heatmaps
+      & \pending
+      & Truth vs fit \\
+      \hline
+
+      \hspace{1.2em}\small$\hookrightarrow$ Frobenius error summary
+      & \pending
+      & Quantitative ranking \\
+      \hline
+
+      \hspace{1.2em}\small$\hookrightarrow$ Bias from wrong-kernel fits
+      & \pending
+      & Misspecification test \\
+      \hline
+
+    \end{tabular}
+  \end{table}
+\end{frame}
+
