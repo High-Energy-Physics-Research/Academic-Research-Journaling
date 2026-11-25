@@ -3,7 +3,7 @@
 Artigo de referência: Mankolli et al., PRC 114, 014905 (2026), `7kjw-vfgp.pdf`.
 Estilo, cores, eixos e nomes: `DESIGN_SYSTEM.md`.
 
-Cada proposta (`1-…global`, `2-…sector`, `3-…cov_inference`, `4-…cov_momentum`, `5-GP_heuristics`) tem as mesmas 7 pastas:
+Cada proposta (`1-…global`, `2-…sector`, `3-…cov_inference`, `4-…cov_momentum`, `5-GP_heuristics`) tem as mesmas 8 pastas:
 (renumeração de 25/11/2026: a antiga 3 `cov_momentum` virou a 4, a antiga 4 `GP_heuristics` virou a 5; a 3 nova é a covariância
 aprendida de dados, job 5079.)
 
@@ -16,6 +16,7 @@ aprendida de dados, job 5079.)
 | `05_F26-corrmatrix` | Fig. 26 | Correlação do emulador vs correlação experimental | baseline (identidade), CS, RBF |
 | `06_S1-shift` | — (nossa) | Deslocamento do posterior vs σ²_emu/σ²_exp | CS e RBF |
 | `07_S2-expcov` | — (nossa) | Covariância e correlação experimental, todos os 917 bins | baseline, CS, RBF |
+| `08_I1-covariance` | — (informação) | Receita da covariância experimental: dados, função ajustada, o que entrou na matriz, como reaplicar | modelo(s) da proposta |
 
 Pastas antigas mantidas (sem mover): `1/marginals` (→ 01), `1/posterior_predictive` (→ 03), `1/shear_bulk_viscosity` (→ 02),
 `2/posterior_predictive_{cs,rbf}_sector` (→ 03), arquivos soltos em `2/` (→ 01, 03, 06).

@@ -44,7 +44,9 @@ duas variantes. Assim, a proposta 1 e a 2 ficam diretamente comparáveis.
 ```
 <ID>__<proposta>__<comparação>[__<detalhe>].<pdf|png>
 ```
-- `<ID>`: `F28-corner`, `F14-viscosity`, `F05-observables`, `F25-varratio`, `F26-corrmatrix`, `S1-shift`
+- `<ID>`: `F28-corner`, `F14-viscosity`, `F05-observables`, `F25-varratio`, `F26-corrmatrix`, `S1-shift`, `S2-expcov`; itens de informação: `I1-covariance`
+- Famílias de ID: **`F`** = figura do artigo (número da figura), **`S`** = figura nossa, **`I`** = item de **informação**
+  (documento + ilustração; não é figura do artigo).
 - `<proposta>`: `global` (1), `sector` (2), `covinf` (3), `covmom` (4), `gpheur` (5)
 - `<comparação>`: `baseline-cs-rbf` (todos juntos) ou `baseline-vs-cs` / `baseline-vs-rbf` (pares)
 - `<detalhe>`: página `p01`…, ou sistema `AuAu200`/`dAu200`
@@ -130,3 +132,25 @@ comparáveis.
 - Fontes: sector = `mcmc/02_08_sector_input_correlations/*_input_matrices.npz`; CS global = ρ = 1 dentro de cada
   sistema; RBF global = `experimental_global_covariance.py` + `global_rbf_acceptance.json` com os comprimentos do job.
 - Script `fig_expcorr.py` (roda no servidor, ver README dos scripts). Arquivo `S2-expcov__<proposta>__baseline-cs-rbf`.
+
+### 08 · `I1-covariance`: artigo da inferência da covariância experimental (item de informação)
+- **O quê:** um artigo curto em LaTeX (estilo de `fatia2a.tex` e `case_terceiro_momento.tex`) que explica, em texto e em números,
+  como a covariância experimental da proposta foi obtida. Dali em diante (cadeia, figuras 01–07), a metodologia é a mesma
+  de todas as propostas.
+- **Fonte canônica, junto aos scripts:** `mcmc/scripts/paper_figures/recipes/I1-covariance__<proposta>/`
+  (`I1-covariance__<proposta>.tex`, `tab/`, `fig/`, `.pdf`). A pasta `08_I1-covariance/` recebe uma cópia, com o `.pdf`,
+  a matriz completa (`__matrix_cov.csv`, `__matrix.npz`) e o manifesto `.json`.
+- **Seções, nesta ordem:**
+  resumo (com o resultado numérico); 1 objetivo; 2 experimentos e dados (fontes, pré-processamento, conjuntos usados, bloco
+  da calibração); 3 método de inferência (equações); 4 resultados (ajuste, parâmetros, **matriz**: parâmetros por bloco,
+  correlação entre blocos, estrutura); 5 o que foi inferido × suposto (**dados / escolha / hipótese / calibração**);
+  6 uso na calibração (cadeia, checagem, assinatura, como reaplicar); 7 limitações; arquivos;
+  apêndice A: **todos** os dados usados, linha a linha; apêndice B: tudo o que falta para reconstruir a matriz.
+- **Números:** nenhum número digitado à mão. `info_covariance.py` (no servidor) grava o manifesto `.json` e a matriz;
+  `info_covariance_tex.py` (local) gera `tab/*.tex` (tabelas) e `tab/valores.tex` (macros `\val...` usadas no texto).
+  Nas tabelas, usar `\tabin{...}` (o `\input` primitivo), não `\input`.
+- **Ilustração** (figura 1 do artigo): 1×3, 17 × 5.6 in: (a) dados + função ajustada; (b) componentes que entraram na
+  matriz; (c) a receita aplicada a um bloco. Cores de papel da seção 1.1. Figura 2: o `S2-expcov` da proposta.
+- Compilar com `latexmk -lualatex`; fonte Latin Modern; português (babel `brazil`), vírgula decimal.
+- Propostas com covariância **suposta** (1, 2): o artigo descreve a regra (CS/RBF, comprimentos, escopo), e as seções 3
+  e 4.1 ficam "não se aplica".
