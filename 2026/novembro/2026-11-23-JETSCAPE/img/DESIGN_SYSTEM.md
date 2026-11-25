@@ -1,7 +1,7 @@
 # Design system: figuras de comparação baseline × modelos de correlação
 
 Referência visual: Mankolli et al., PRC 114, 014905 (2026), `7kjw-vfgp.pdf`.
-Objetivo: qualquer figura de uma proposta (1–4) pode ser posta **lado a lado** com a mesma figura de outra proposta
+Objetivo: qualquer figura de uma proposta (1–5) pode ser posta **lado a lado** com a mesma figura de outra proposta
 e comparada diretamente. Por isso, **tudo o que não é o resultado fica fixo**: ordem dos painéis, tamanho, eixos,
 limites, cores, legendas, intervalos de credibilidade e número de amostras.
 
@@ -20,7 +20,8 @@ Dados e scripts: sempre em `~/Remote-HPC/code-space/my-work/jetscape-emulator/3d
 | Baseline (cov. diagonal) | verde `#2CA02C`; banda α=0.45 com hachura `++++` (como a Fig. 14) | referência em toda figura | `90% C.I. baseline (diag)` |
 | Modelo 1 (CS: global, sector…) | vermelho `#E41A1C`, tracejado `(0,(5,3))`, lw=2.5 | | `90% C.I. CS <escopo>` |
 | Modelo 2 (RBF: global, sector…) | azul `#1F3FD8`, tracejado `(0,(5,3))`, lw=2.5 | | `90% C.I. RBF <escopo>` |
-| Modelo 3 (se houver: propostas 3, 4) | roxo `#7B2D8E`, ponto-traço `(0,(5,2,1,2))` | | `90% C.I. <nome>` |
+| Modelo 3 (se houver: propostas 4, 5) | roxo `#7B2D8E`, ponto-traço `(0,(5,2,1,2))` | | `90% C.I. <nome>` |
+| Covariância aprendida de dados (proposta 3) | laranja `#FF7F00`, tracejado `(0,(5,3))`, lw=2.5 | | `90% C.I. learned PHOBOS cov. (data)` |
 | Dados experimentais | preto, marcador `o` 3.5 pt, barra de erro 0.8 pt | Fig. 5 | — |
 
 Regra: vermelho = CS, azul = RBF **em qualquer escopo** (global, sector), como a Fig. 14 usa vermelho e azul para as
@@ -44,7 +45,7 @@ duas variantes. Assim, a proposta 1 e a 2 ficam diretamente comparáveis.
 <ID>__<proposta>__<comparação>[__<detalhe>].<pdf|png>
 ```
 - `<ID>`: `F28-corner`, `F14-viscosity`, `F05-observables`, `F25-varratio`, `F26-corrmatrix`, `S1-shift`
-- `<proposta>`: `global` (1), `sector` (2), `covmom` (3), `gpheur` (4)
+- `<proposta>`: `global` (1), `sector` (2), `covinf` (3), `covmom` (4), `gpheur` (5)
 - `<comparação>`: `baseline-cs-rbf` (todos juntos) ou `baseline-vs-cs` / `baseline-vs-rbf` (pares)
 - `<detalhe>`: página `p01`…, ou sistema `AuAu200`/`dAu200`
 

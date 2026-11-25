@@ -6,27 +6,30 @@
   "chains": {
     "baseline": "mcmc/01_01_baseline_reproduction/chain-idf-0.hdf",
     "cs_global": "mcmc/02_01_global_cs/chain-idf-0-cs-system-rho-1.hdf",
-    "rbf_global": "mcmc/02_02_global_rbf/chain-idf-0-rbf-global.hdf"
+    "rbf_global": "mcmc/02_02_global_rbf/chain-idf-0-rbf-global-c33aba121315.hdf"
   },
   "scripts": {
-    "._common.py": "bb0aeec4dbffc8a5",
+    "._common.py": "ed65a3ce07f7e4f7",
     "._emu.py": "bb0aeec4dbffc8a5",
-    "._fig_corner.py": "bb0aeec4dbffc8a5",
+    "._fig_corner.py": "ed65a3ce07f7e4f7",
     "._fig_corrmatrix.py": "bb0aeec4dbffc8a5",
-    "._fig_observables.py": "bb0aeec4dbffc8a5",
-    "._fig_shift.py": "bb0aeec4dbffc8a5",
+    "._fig_expcorr.py": "ed65a3ce07f7e4f7",
+    "._fig_observables.py": "ed65a3ce07f7e4f7",
+    "._fig_shift.py": "ed65a3ce07f7e4f7",
     "._fig_varratio.py": "bb0aeec4dbffc8a5",
-    "._fig_viscosity.py": "bb0aeec4dbffc8a5",
-    "._style.py": "bb0aeec4dbffc8a5",
-    "common.py": "3d1a845a8e3e73a8",
+    "._fig_viscosity.py": "ed65a3ce07f7e4f7",
+    "._style.py": "ed65a3ce07f7e4f7",
+    "common.py": "8fc58569defb7bd7",
     "emu.py": "1447558131e32be8",
-    "fig_corner.py": "2650eee9bf8b10e1",
-    "fig_corrmatrix.py": "71f15721746d3778",
-    "fig_observables.py": "eabc075bc7c7775f",
-    "fig_shift.py": "09ebd61b1692db53",
-    "fig_varratio.py": "a3a3e73de8ea44c9",
-    "fig_viscosity.py": "8e09eba648a55707",
-    "style.py": "d83651d969958465"
+    "fig_corner.py": "649badc6bb1c95da",
+    "fig_corrmatrix.py": "1967268d672de4a5",
+    "fig_expcorr.py": "efb40534ecba0f65",
+    "fig_observables.py": "fba02c7784d3ad89",
+    "fig_observables_focus.py": "2d3482c3ec931a51",
+    "fig_shift.py": "1c6a3a8d569768b4",
+    "fig_varratio.py": "00d3bb42d611274d",
+    "fig_viscosity.py": "22ffa5a776d5754d",
+    "style.py": "5376d50aaf742ec2"
   },
   "bin_level": "mcmc/02_12_shift_vs_cov_ratio/bin_level.npz",
   "parameters": [
@@ -98,6 +101,31 @@
         0.2997822050452566
       ],
       "spearman": 0.09624060150375939
+    },
+    "rbf_global": {
+      "shift": [
+        0.7260945231087595,
+        0.2946954691962538,
+        0.33702659880547814,
+        0.6740553528206494,
+        0.9300866960774413,
+        2.5129310918317125,
+        1.6992128613201503,
+        1.34906273485581,
+        0.1744324819040759,
+        0.5959176479420939,
+        0.02764089887443487,
+        0.009596802475325671,
+        0.3058943291797172,
+        0.38285596094885305,
+        0.008848432719183789,
+        1.8271780624547338,
+        0.5613202883921123,
+        1.1369230251983333,
+        0.9945571662245616,
+        3.2215358309268805
+      ],
+      "spearman": -0.14586466165413534
     }
   }
 }

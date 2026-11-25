@@ -11,3 +11,8 @@
 - Dados (3dglauber-bayes-example/mcmc/...):
 - burnin / thin / amostras:
 - Comando:
+
+## RBF global: job 5078 (gerado em 25/11/2026)
+- Cadeia: `mcmc/02_02_global_rbf/chain-idf-0-rbf-global-c33aba121315.hdf` (200 walkers, burn-in 20 000 + produção 20 000; 80 000 amostras, thin 50)
+- Script de execução: `mcmc/04_paper_figures/run_5078_5079.sh` (no servidor, venv `/storage/avilamrs/code-space/my-work/jetscape-emulator/.venv`); saída em `mcmc/04_paper_figures/out/global_rbf/` e copiada para cá.
+- Substitui a versão anterior (painel RBF "chain not available yet"); backup em `mcmc/04_paper_figures/backup_before_5078/06_S1-shift/`.

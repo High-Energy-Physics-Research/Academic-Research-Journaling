@@ -3,7 +3,9 @@
 Artigo de referência: Mankolli et al., PRC 114, 014905 (2026), `7kjw-vfgp.pdf`.
 Estilo, cores, eixos e nomes: `DESIGN_SYSTEM.md`.
 
-Cada proposta (`1-…global`, `2-…sector`, `3-…cov_momentum`, `4-GP_heuristics`) tem as mesmas 7 pastas:
+Cada proposta (`1-…global`, `2-…sector`, `3-…cov_inference`, `4-…cov_momentum`, `5-GP_heuristics`) tem as mesmas 7 pastas:
+(renumeração de 25/11/2026: a antiga 3 `cov_momentum` virou a 4, a antiga 4 `GP_heuristics` virou a 5; a 3 nova é a covariância
+aprendida de dados, job 5079.)
 
 | Pasta | Artigo | Conteúdo | Comparação |
 |---|---|---|---|
