@@ -1,0 +1,140 @@
+% Plots from 2026-11-23-JETSCAPE/img/{1-,2-,3-}, copied (downscaled) to img/studies/.
+% \studyfig{label}{frame title}{image}: one figure per slide, no caption.
+\newcommand{\studyfig}[3]{%
+  \begin{frame}[label=#1]{#2}
+    \centering
+    \includegraphics[width=\linewidth,height=0.82\textheight,keepaspectratio]{#3}
+  \end{frame}}
+
+%========================================================================================
+\section{Results: Sensitivity Test - Global Correlation (CS and RBF)}
+
+\begin{frame}{1- Global Correlation (CS and RBF) -- Results}
+  \begin{itemize}
+    \item \hyperlink{g-expcov}{Experimental covariance and correlation}
+    \item \hyperlink{g-corr}{Correlation matrices: emulator vs. experimental}
+    \item \hyperlink{g-varratio}{Variance ratio $\Sigma_{\mathrm{emu}}/\Sigma_{\mathrm{exp}}$}
+    \item Marginals (corner): \hyperlink{g-corner-cs}{CS} \textbar{} \hyperlink{g-corner-rbf}{RBF}
+    \item Observables: \hyperlink{g-obs-cs}{CS} \textbar{} \hyperlink{g-obs-rbf}{RBF}
+    \item \hyperlink{g-visc}{Shear and bulk viscosity}
+    \item \hyperlink{g-shift}{Posterior shift vs. variance ratio}
+    \item \hyperlink{g-covmodel}{Covariance model}
+  \end{itemize}
+\end{frame}
+
+\studyfig{g-expcov}{1- Global (CS and RBF) -- Experimental Covariance}{img/studies/1-global/expcov.png}
+\studyfig{g-corr}{1- Global (CS and RBF) -- Correlation Matrices}{img/studies/1-global/corrmatrix.png}
+\studyfig{g-varratio}{1- Global -- Variance Ratio}{img/studies/1-global/varratio.png}
+\studyfig{g-corner-cs}{1- Global (CS) -- Marginals}{img/studies/1-global/corner_cs.png}
+\studyfig{g-corner-rbf}{1- Global (RBF) -- Marginals}{img/studies/1-global/corner_rbf.png}
+\studyfig{g-obs-cs}{1- Global (CS) -- Observables}{img/studies/1-global/observables_cs.png}
+\studyfig{g-obs-rbf}{1- Global (RBF) -- Observables}{img/studies/1-global/observables_rbf.png}
+\studyfig{g-visc}{1- Global (CS and RBF) -- Shear and Bulk Viscosity}{img/studies/1-global/viscosity.png}
+\studyfig{g-shift}{1- Global (CS and RBF) -- Posterior Shift}{img/studies/1-global/shift.png}
+\studyfig{g-covmodel}{1- Global (CS and RBF) -- Covariance Model}{img/studies/1-global/covmodel.png}
+
+%========================================================================================
+\section{Results: Sensitivity Test - Sector Correlation (CS and RBF)}
+
+\begin{frame}{2- Sector Correlation (CS and RBF) -- Results}
+  \begin{itemize}
+    \item \hyperlink{s-expcov}{Experimental covariance and correlation}
+    \item \hyperlink{s-corr}{Correlation matrices: emulator vs. experimental}
+    \item \hyperlink{s-varratio}{Variance ratio $\Sigma_{\mathrm{emu}}/\Sigma_{\mathrm{exp}}$}
+    \item Marginals (corner): \hyperlink{s-corner-cs}{CS} \textbar{} \hyperlink{s-corner-rbf}{RBF}
+    \item Observables: \hyperlink{s-obs-cs}{CS} \textbar{} \hyperlink{s-obs-rbf}{RBF}
+    \item \hyperlink{s-visc}{Shear and bulk viscosity}
+    \item \hyperlink{s-shift}{Posterior shift vs. variance ratio}
+    \item \hyperlink{s-covmodel}{Covariance model}
+  \end{itemize}
+\end{frame}
+
+\studyfig{s-expcov}{2- Sector (CS and RBF) -- Experimental Covariance}{img/studies/2-sector/expcov.png}
+\studyfig{s-corr}{2- Sector (CS and RBF) -- Correlation Matrices}{img/studies/2-sector/corrmatrix.png}
+\studyfig{s-varratio}{2- Sector -- Variance Ratio}{img/studies/2-sector/varratio.png}
+\studyfig{s-corner-cs}{2- Sector (CS) -- Marginals}{img/studies/2-sector/corner_cs.png}
+\studyfig{s-corner-rbf}{2- Sector (RBF) -- Marginals}{img/studies/2-sector/corner_rbf.png}
+\studyfig{s-obs-cs}{2- Sector (CS) -- Observables}{img/studies/2-sector/observables_cs.png}
+\studyfig{s-obs-rbf}{2- Sector (RBF) -- Observables}{img/studies/2-sector/observables_rbf.png}
+\studyfig{s-visc}{2- Sector (CS and RBF) -- Shear and Bulk Viscosity}{img/studies/2-sector/viscosity.png}
+\studyfig{s-shift}{2- Sector (CS and RBF) -- Posterior Shift}{img/studies/2-sector/shift.png}
+\studyfig{s-covmodel}{2- Sector (CS and RBF) -- Covariance Model}{img/studies/2-sector/covmodel.png}
+
+%========================================================================================
+\section{Results: Covariance Inference (PHOBOS)}
+
+\begin{frame}{3- Covariance Inference (PHOBOS) -- Results}
+  \begin{itemize}
+    \item \hyperlink{c-expcov}{Experimental covariance and correlation}
+    \item \hyperlink{c-varratio}{Variance ratio $\Sigma_{\mathrm{emu}}/\Sigma_{\mathrm{exp}}$}
+    \item \hyperlink{c-corner}{Marginals (corner)}
+    \item \hyperlink{c-obs}{Observables}
+    \item \hyperlink{c-visc}{Shear and bulk viscosity}
+    \item \hyperlink{c-shift}{Posterior shift vs. variance ratio}
+    \item \hyperlink{c-covmodel}{Covariance model}
+  \end{itemize}
+\end{frame}
+
+\studyfig{c-expcov}{3- Cov. Inference (PHOBOS) -- Experimental Covariance}{img/studies/3-covinf/expcov.png}
+\studyfig{c-varratio}{3- Cov. Inference (PHOBOS) -- Variance Ratio}{img/studies/3-covinf/varratio.png}
+\studyfig{c-corner}{3- Cov. Inference (PHOBOS) -- Marginals}{img/studies/3-covinf/corner.png}
+\studyfig{c-obs}{3- Cov. Inference (PHOBOS) -- Observables}{img/studies/3-covinf/observables.png}
+\studyfig{c-visc}{3- Cov. Inference (PHOBOS) -- Shear and Bulk Viscosity}{img/studies/3-covinf/viscosity.png}
+\studyfig{c-shift}{3- Cov. Inference (PHOBOS) -- Posterior Shift}{img/studies/3-covinf/shift.png}
+\studyfig{c-covmodel}{3- Cov. Inference (PHOBOS) -- Covariance Model}{img/studies/3-covinf/covmodel.png}
+
+%========================================================================================
+\section{Results: Sensitivity Test - Third Moment (Non-Gaussian Sources)}
+
+\begin{frame}{4- Third Moment (Non-Gaussian Sources) -- Results}
+  \small
+  \begin{itemize}
+    \item \hyperlink{m-obs}{Observables: STAR $v_2\{2\}(\eta)$ 20--70\%}
+    \item \hyperlink{m-visc}{Shear and bulk viscosity}
+    \item \textbf{(a) Global nuisance:}
+      \hyperlink{m-a-marg}{Marginals} \textbar{}
+      \hyperlink{m-a-lambda}{$\lambda$ prior/posterior} \textbar{}
+      \hyperlink{m-a-src}{Sources} \textbar{}
+      \hyperlink{m-a-recN}{Recovery vs.\ $N$} \textbar{}
+      \hyperlink{m-a-v2}{STAR $v_2(\eta)$} \textbar{}
+      \hyperlink{m-a-v2c}{STAR $v_2(\eta)$ corrected}
+    \item \textbf{(b) Detector split:}
+      \hyperlink{m-b-marg}{Marginals} \textbar{}
+      \hyperlink{m-b-lambda}{$\lambda$ prior/posterior} \textbar{}
+      \hyperlink{m-b-src}{Sources} \textbar{}
+      \hyperlink{m-b-recN}{Recovery vs.\ $N$} \textbar{}
+      \hyperlink{m-b-shift}{Posterior shift} \textbar{}
+      \hyperlink{m-b-v2}{STAR $v_2(\eta)$} \textbar{}
+      \hyperlink{m-b-v2c}{STAR $v_2(\eta)$ corrected} \textbar{}
+      Observables: \hyperlink{m-b-obs1}{Au--Au} \textbar{} \hyperlink{m-b-obsd}{d--Au}
+    \item \textbf{(c) Quantum source inference:}
+      \hyperlink{m-c-qpe}{QPE circuit} \textbar{}
+      \hyperlink{m-c-qvc}{Quantum vs.\ classical sources}
+  \end{itemize}
+\end{frame}
+
+\studyfig{m-obs}{4- Third Moment -- Observables (STAR $v_2$)}{img/studies/4-covmom/observables_star.png}
+\studyfig{m-visc}{4- Third Moment -- Shear and Bulk Viscosity}{img/studies/4-covmom/viscosity.png}
+
+\studyfig{m-a-marg}{4- Third Moment (a: Global) -- Marginals}{img/studies/4-covmom/a_marginals.png}
+\studyfig{m-a-lambda}{4- Third Moment (a: Global) -- Nuisance $\lambda$}{img/studies/4-covmom/a_lambda.png}
+\studyfig{m-a-src}{4- Third Moment (a: Global) -- Sources}{img/studies/4-covmom/a_sources.png}
+\studyfig{m-a-recN}{4- Third Moment (a: Global) -- Recovery vs.\ $N$}{img/studies/4-covmom/a_recovery_vs_N.png}
+\studyfig{m-a-v2}{4- Third Moment (a: Global) -- STAR $v_2(\eta)$}{img/studies/4-covmom/a_star_v2.png}
+\studyfig{m-a-v2c}{4- Third Moment (a: Global) -- STAR $v_2(\eta)$ Corrected}{img/studies/4-covmom/a_star_v2_corrected.png}
+
+\studyfig{m-b-marg}{4- Third Moment (b: Split) -- Marginals}{img/studies/4-covmom/b_marginals.png}
+\studyfig{m-b-lambda}{4- Third Moment (b: Split) -- Nuisance $\lambda$}{img/studies/4-covmom/b_lambda.png}
+\studyfig{m-b-src}{4- Third Moment (b: Split) -- Sources}{img/studies/4-covmom/b_sources.png}
+\studyfig{m-b-recN}{4- Third Moment (b: Split) -- Recovery vs.\ $N$}{img/studies/4-covmom/b_recovery_vs_N.png}
+\studyfig{m-b-shift}{4- Third Moment (b: Split) -- Posterior Shift}{img/studies/4-covmom/b_shift.png}
+\studyfig{m-b-v2}{4- Third Moment (b: Split) -- STAR $v_2(\eta)$}{img/studies/4-covmom/b_star_v2.png}
+\studyfig{m-b-v2c}{4- Third Moment (b: Split) -- STAR $v_2(\eta)$ Corrected}{img/studies/4-covmom/b_star_v2_corrected.png}
+\studyfig{m-b-obs1}{4- Third Moment (b: Split) -- Observables Au--Au (1/4)}{img/studies/4-covmom/b_obs_AuAu_p1.png}
+\studyfig{m-b-obs2}{4- Third Moment (b: Split) -- Observables Au--Au (2/4)}{img/studies/4-covmom/b_obs_AuAu_p2.png}
+\studyfig{m-b-obs3}{4- Third Moment (b: Split) -- Observables Au--Au (3/4)}{img/studies/4-covmom/b_obs_AuAu_p3.png}
+\studyfig{m-b-obs4}{4- Third Moment (b: Split) -- Observables Au--Au (4/4)}{img/studies/4-covmom/b_obs_AuAu_p4.png}
+\studyfig{m-b-obsd}{4- Third Moment (b: Split) -- Observables d--Au}{img/studies/4-covmom/b_obs_dAu.png}
+
+\studyfig{m-c-qpe}{4- Third Moment (c: Quantum) -- QPE Circuit}{img/studies/4-covmom/c_qpe_circuit.png}
+\studyfig{m-c-qvc}{4- Third Moment (c: Quantum) -- Quantum vs.\ Classical}{img/studies/4-covmom/c_quantum_vs_classical.png}

@@ -40,6 +40,12 @@ duas variantes. Assim, a proposta 1 e a 2 ficam diretamente comparáveis.
 - Saída: PDF vetorial + PNG 300 dpi, fundo branco, `bbox_inches='tight', pad_inches=0.05`.
 - Título geral (`suptitle`): não usar; a descrição fica no `info.md`. Rótulo de proposta/modelo: só na legenda.
 
+### 1.5 Orientação dos eixos em matrizes (regra de 27/11/2026)
+- Em **toda** figura de matriz (F25, F26, S2, ilustração do I1 e qualquer nova), os dois eixos são **crescentes**:
+  x da esquerda para a direita e **y de baixo para cima**. O primeiro bin fica no canto inferior esquerdo.
+- No matplotlib: `imshow(..., origin="lower")`. Nunca usar `origin="upper"` (padrão do `imshow`) nem `invert_yaxis()`.
+- Motivo: com `origin="upper"`, η = −5 ficava embaixo em x mas em cima em y (eixo y decrescente).
+
 ### 1.4 Regra de nome
 ```
 <ID>__<proposta>__<comparação>[__<detalhe>].<pdf|png>
@@ -99,6 +105,7 @@ comparáveis.
 - **Cada painel tem a sua barra de cor e escala linear própria**, como na Fig. 25, para poder ser recortado e usado
   sozinho. Título do painel: `Σ_emu/Σ_exp <sistema>` + observável, centralidade e experimento.
 - Matriz com só a diagonal colorida, colormap `cividis`, fora da diagonal branco. Tamanho 22 × 24 in.
+- Eixos crescentes, `origin="lower"` (seção 1.5).
 - Continua sendo gerada também a versão de 3 painéis do artigo (`F25-varratio__<proposta>__baseline`): d-Au dN/dη
   0-5% PHENIX; Au-Au v2(η) 3-15% PHOBOS; Au-Au v2(pT) 20-30% PHENIX (5.5 × 15 in).
 - Fonte: `r_i` de `mcmc/02_12_shift_vs_cov_ratio/bin_level.npz` (média em 60 amostras do posterior da baseline).
@@ -111,6 +118,11 @@ comparáveis.
 - Colormap `cividis`, escala **fixa [0, 1]** em todas as colunas, com uma colorbar comum. (O artigo ajusta a escala
   por painel; aqui ela é fixa, para dar para comparar.)
 - Faixas brancas separando regiões de rapidez/setores, como na Fig. 26.
+- Eixos crescentes, `origin="lower"` (seção 1.5).
+- **Versão com todos os observáveis** (regra de 24/11 aplicada em 27/11): `fig_corrmatrix_all.py`, uma linha por
+  observável na ordem da F05, 5 linhas por página, arquivos `F26-corrmatrix__<proposta>__<comparação>__pNN`
+  (8 páginas para global e sector; para `covinf`, só as 11 classes do bloco Au-Au PHOBOS dN/dη, 3 páginas).
+  Mesmo formato de painel da versão de 3 observáveis (barra de cor por painel, recortável).
 - Título: `Cov(y_i,y_j)/σ_iσ_j (<observável>)` no topo de cada linha; nome da coluna no topo.
 
 ### 06 · `S1-shift`: deslocamento do posterior vs σ²_emu/σ²_exp (figura nossa, sem equivalente no artigo)
@@ -126,6 +138,7 @@ comparáveis.
   proposta. Tamanho 27 × 17.5 in. Ordem dos bins = ordem da verossimilhança (`bin_index.csv`: Au-Au 791 → d-Au 126).
 - Covariância no espaço da verossimilhança (σ_i = `likelihood_std`, multiplicidades em log), escala **log com a mesma
   faixa em todos os painéis** (10⁻⁹ até o máximo); zeros em branco. Correlação `cividis` fixa em [0, 1].
+- Eixos crescentes, `origin="lower"` (seção 1.5): bin 0 no canto inferior esquerdo.
 - Uma barra de cor por painel (recortável). Separadores discretos: entre observáveis cinza claro quase invisível
   (lw 0.15, α 0.25); entre sistemas cinza (lw 0.6, α 0.6).
 - Eixos com **contador de bins** 0, 100, …, 800, 917 ("bin index") e o nome do sistema nos eixos opostos (topo/direita).
