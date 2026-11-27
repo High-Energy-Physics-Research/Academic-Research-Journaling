@@ -12,28 +12,34 @@
     "._emu.py": "bb0aeec4dbffc8a5",
     "._fig_corner.py": "ed65a3ce07f7e4f7",
     "._fig_corrmatrix.py": "bb0aeec4dbffc8a5",
+    "._fig_corrmatrix_all.py": "bb0aeec4dbffc8a5",
     "._fig_expcorr.py": "ed65a3ce07f7e4f7",
     "._fig_observables.py": "ed65a3ce07f7e4f7",
     "._fig_observables_focus.py": "ed65a3ce07f7e4f7",
+    "._fig_poster_dau_dndeta.py": "bb0aeec4dbffc8a5",
     "._fig_shift.py": "ed65a3ce07f7e4f7",
     "._fig_varratio.py": "bb0aeec4dbffc8a5",
-    "._fig_viscosity.py": "ed65a3ce07f7e4f7",
+    "._fig_viscosity.py": "bb0aeec4dbffc8a5",
     "._info_covariance.py": "ed65a3ce07f7e4f7",
-    "._info_covariance_assumed.py": "ed65a3ce07f7e4f7",
+    "._info_covariance_assumed.py": "bb0aeec4dbffc8a5",
+    "._info_covariance_assumed_tex.py": "ed65a3ce07f7e4f7",
     "._info_covariance_tex.py": "ed65a3ce07f7e4f7",
     "._style.py": "ed65a3ce07f7e4f7",
     "common.py": "1c38cafc7455b3c3",
     "emu.py": "1447558131e32be8",
     "fig_corner.py": "2650eee9bf8b10e1",
-    "fig_corrmatrix.py": "1967268d672de4a5",
+    "fig_corrmatrix.py": "b9a3368295fe1ecf",
+    "fig_corrmatrix_all.py": "6ec8bc814c85a064",
     "fig_expcorr.py": "70d9f6082d13b40c",
     "fig_observables.py": "bd2b42405f1583eb",
     "fig_observables_focus.py": "74ab49c5ecbf6672",
+    "fig_poster_dau_dndeta.py": "0b8562a9f0d62dc9",
     "fig_shift.py": "6077f62e16c97730",
-    "fig_varratio.py": "00d3bb42d611274d",
-    "fig_viscosity.py": "8e09eba648a55707",
+    "fig_varratio.py": "eef0afff00c2beff",
+    "fig_viscosity.py": "897e86d29d2e8423",
     "info_covariance.py": "c0a99e6074d0ef1f",
-    "info_covariance_assumed.py": "3ba1b9cbb77c4f65",
+    "info_covariance_assumed.py": "c296e44926722155",
+    "info_covariance_assumed_tex.py": "0ff456b0595e305b",
     "info_covariance_tex.py": "9cd9a8d7764c1333",
     "style.py": "364ba4096bdad4d6"
   },
@@ -7298,16 +7304,16 @@
           "frac_above_0p5": 1.0,
           "frac_exact_zero": 0.0,
           "rank_corr": 1,
-          "min_eig_corr": -8.385778436320537e-13,
+          "min_eig_corr": -7.383359211928448e-13,
           "top_eig_frac_cov": [
             1.0000000000000002,
-            1.6243261192614107e-16,
-            6.020724248538106e-18
+            1.532269066404453e-16,
+            6.078174391348545e-18
           ],
           "top_eig_frac_corr": [
-            0.9999999999999991,
-            1.958687330591309e-15,
-            4.214315967823905e-18
+            0.9999999999999989,
+            2.1776286615198215e-15,
+            4.898345708436741e-18
           ]
         },
         "d-Au-200": {
@@ -7316,16 +7322,16 @@
           "frac_above_0p5": 1.0,
           "frac_exact_zero": 0.0,
           "rank_corr": 1,
-          "min_eig_corr": -5.703955077772572e-15,
+          "min_eig_corr": -1.7622127490580534e-14,
           "top_eig_frac_cov": [
             1.0,
-            1.4866674346084752e-16,
-            1.336811712044179e-17
+            1.4870300914836022e-16,
+            1.275773198525202e-17
           ],
           "top_eig_frac_corr": [
-            0.9999999999999993,
-            6.749442435386536e-16,
-            7.680868646837943e-18
+            0.9999999999999998,
+            3.5538126032686017e-16,
+            1.0206862592931036e-17
           ]
         }
       },
@@ -7591,16 +7597,16 @@
           "frac_above_0p5": 0.03370193153995103,
           "frac_exact_zero": 0.25708844756677174,
           "rank_corr": 420,
-          "min_eig_corr": -2.022351352075467e-15,
+          "min_eig_corr": -2.029521271478935e-15,
           "top_eig_frac_cov": [
-            0.07526707199967565,
+            0.07526707199967572,
             0.06511943399868071,
             0.06359610410886896
           ],
           "top_eig_frac_corr": [
             0.06631783786943718,
-            0.05438693282166586,
-            0.040475090238967455
+            0.054386932821665825,
+            0.0404750902389675
           ]
         },
         "d-Au-200": {
@@ -7609,16 +7615,16 @@
           "frac_above_0p5": 0.18387301587301588,
           "frac_exact_zero": 0.0015238095238095239,
           "rank_corr": 60,
-          "min_eig_corr": -3.3884775166836385e-15,
+          "min_eig_corr": -2.756979828014481e-15,
           "top_eig_frac_cov": [
-            0.217696995296705,
-            0.20731796885731277,
-            0.17459003141743343
+            0.21769699529670494,
+            0.20731796885731282,
+            0.1745900314174334
           ],
           "top_eig_frac_corr": [
-            0.21560778511754466,
-            0.18538564780818947,
-            0.16510072043648014
+            0.21560778511754464,
+            0.1853856478081895,
+            0.1651007204364801
           ]
         }
       },
